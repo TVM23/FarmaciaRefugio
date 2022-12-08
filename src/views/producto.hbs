@@ -1,0 +1,160 @@
+<head>
+    <link rel="preload" href="/css/misestilos.css" as="style" />
+    <link rel="stylesheet" href="/css/misestilos.css" />
+</head>
+<body>
+     <section class="principal">
+      <div class="principal-2">
+        <div class="btn-regresar">
+          <a href="/">< Regresar</a>
+        </div>
+        <div class="producto">
+          <div class="imagen-datos">
+            <div class="imagen">
+              <img src="/img/medicamentos/pepto-bismol.webp" />
+              <div class="agg-carrito">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-shopping-cart"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#ffffff"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <circle cx="6" cy="19" r="2" />
+                  <circle cx="17" cy="19" r="2" />
+                  <path d="M17 17h-11v-14h-2" />
+                  <path d="M6 5l14 1l-1 7h-13" />
+                </svg>
+              </div>
+            </div>
+            <div class="datos">
+              <div class="nombre">
+                <p>Pepto-Bismol 24 Tabletas</p>
+              </div>
+              <div class="precio">
+                <p>$50.00 MXN p/u</p>
+              </div>
+              <div class="descripcion-r">
+                <p>
+                  Pepto Bismol ayuda a aliviar los síntomas de acidez,
+                  indigestión, diarrea, malestar estomacal y náusea.
+                </p>
+              </div>
+              <div class="cant-agg">
+                <div class="alinear-izquierda">
+                  <div class="cantidad">
+                    <button
+                      class="menos"
+                      id="disabledBtn"
+                      onclick="addValueFunction(this)"
+                      value="decrease"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-minus"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#ffffff"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </button>
+                    <div class="numero">
+                      <p id="cantidad" value="">0</p>
+                    </div>
+                    <button
+                      class="mas"
+                      onclick="addValueFunction(this)"
+                      value="increase"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#ffffff"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="agregar">
+                  <p>Agregar al carrito</p>
+                </div>
+              </div>
+              <div class="advertencias">
+                <p>*Precio exclusivo tienda en linea</p>
+                <p>*Producto sujeto a disponibilidad</p>
+              </div>
+            </div>
+          </div>
+          <div class="descripcion">
+            <div class="titulod">
+              <p class="titulo">Detalles y descripción del prodcuto</p>
+            </div>
+            <div class="instrucciones">
+              <p class="subtitulos">Instrucciones:</p>
+              <p>Vía de administración oral. Mastíquese antes de tragar.</p>
+            </div>
+            <div class="dosis">
+              <p class="subtitulos">Dosis y modo de empleo:</p>
+              <ul>
+                <li>Adultos: 2 tabletas.</li>
+                <li>Niños de 9 a 12 años: 1 tableta.</li>
+                <li>Niños de 6 a 9 años: 2/3 de tableta.</li>
+              </ul>
+              <p>
+                Repita dosis según requiera, máximo 8 dosis en 24 horas. Si
+                persisten las molestias por más de 2 días, consulte a su médico.
+              </p>
+            </div>
+            <div class="compuesto">
+              <p class="subtitulos">Compuesto:</p>
+              <p class="a">Subsalicilato de Bismuto</p>
+              <p class="subtitulos">Contenido:</p>
+              <p>Caja con 12 tabletas de concentración, 262.4 mg</p>
+            </div>
+            <div class="beneficios">
+              <p class="subtitulos">Beneficios:</p>
+              <ul>
+                <li>
+                  Acidez: calma la irritación con su acción protectora sin
+                  causar estreñimiento.
+                </li>
+                <li>Indigestión: proporciona alivio efectivo y seguro.</li>
+                <li>
+                  Malestar estomacal: alivia el malestar estomacal causado por
+                  sentirse pleno.
+                </li>
+                <li>
+                  Náusea: alivio efectivo de la náusea producto de indigestión.
+                </li>
+                <li>Diarrea: controla la diarrea en 4-24 horas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+    <script src="/js/script1.js"></script>

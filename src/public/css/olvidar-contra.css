@@ -1,0 +1,269 @@
+:root{
+    --primario: #6774F1;
+    --primario-oscuro: #4C56BD;
+    --rojo: #C70000;
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --gris: #B8B8B8;
+    --gris_claro: #F7F7F7;
+    --gris2: #D6D6D6;
+    --azulFB: #375088;
+    --azulGoogle: #4285F4;
+    --tipo-letra: 'PT Serif', 'Sans Serif', serif, sans-serif;
+}
+
+/* Generales */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{ 
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.barra input{
+    display: none;
+}
+
+.icono-busqueda{
+    display: none;
+}
+
+.sombra{
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  padding: 2rem;
+  background-color: var(--blanco);
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-form{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 50rem; /* --40% */
+    height: auto;
+    border: 0.05rem solid;
+    border-color: var(--oscuro);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.datos{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    border-bottom: 0.3rem solid;
+    border-color: var(--gris);
+
+    margin-bottom: 2rem;
+}
+
+.titulo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 0 0 0.3rem 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.formulario{
+    width: min(60rem, 100%);  /* Aplica el valor dependiendo del ancho de la ventana */
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario fieldset{
+    border: none;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.campos{
+    margin-bottom: 1rem;
+}
+
+.campos p{
+    margin-bottom: 0rem;
+    margin-top: 0;
+}
+
+.campos input{
+    width: 100%;
+    height: 4rem;
+    border-radius: 1rem;
+    border: 0.10rem solid;
+    border-color: var(--gris);
+    padding: 1rem;
+    transition: 0.3s ease all;
+}
+
+.esp{
+    margin-bottom: 0.8rem;
+}
+
+.campos input:focus{
+    border-color: var(--primario);
+}
+
+.error input{
+    border-color: var(--rojo);
+}
+
+.success input{
+    border-color: #2ecc71;
+}
+
+.mensaje-error{
+    color: var(--rojo);
+    font-size: 1rem;
+    padding-left: 0.4rem;
+    margin: 0;
+    visibility: hidden;
+}
+
+.mensaje-error.error{
+    visibility: visible;
+}
+
+.btn-ingresos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   /*  border: 0.05rem solid;
+    border-color: var(--gris); */
+    width: 100%;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    font-family: sans-serif;
+}
+
+.ingresar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ingresar input{
+    border-radius: 20rem;
+    height: 3.4rem;
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.login input:hover{
+    background-color: var(--primario-oscuro);
+}
+
+.login input{
+    border: none;
+    color: var(--blanco);
+    background-color: var(--primario);
+    cursor: pointer;
+}
+
+.crear-cuenta{
+    cursor: pointer;
+
+    width: 100%;
+    margin: 0.5rem;
+    height: 3.4rem;
+}
+
+.crear-cuenta a{
+    border: 0.05rem solid;
+    border-color: var(--primario);
+    border-radius: 20rem;
+
+    background-color: var(--blanco);
+
+    color: var(--primario);
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.btn-crear{
+    width: 100%;
+    height: 3.4rem;
+    margin: 0.5rem;
+}
+
+.crear-cuenta a:hover{
+    color: var(--primario-oscuro);
+    border-color: var(--primario-oscuro);
+    background-color: var(--gris_claro);
+}
+
+
+.registro p{
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0.5rem;
+}
+
+@media (max-width:550px){
+    .contenedor-form{
+        width: 90%; /* --40% */
+    }
+
+    .cont{
+        width: 85%;
+    }
+    
+}
+@media (max-width:480px){
+    .contenedor-form{
+        width: 90%; /* --40% */
+    }
+
+    .cont{
+        width: 85%;
+    }
+    
+}

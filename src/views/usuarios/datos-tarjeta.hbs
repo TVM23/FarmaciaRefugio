@@ -1,0 +1,107 @@
+<head>
+    <link rel="preload" href="/css/datos-tarjeta.css" as="style" />
+    <link rel="stylesheet" href="/css/datos-tarjeta.css"/>
+</head>
+<body>
+    <section class="cuerpo">
+        <div class="contenidos">
+          <div class="contenedor-form sombra">
+            <div class="datos">
+              <div class="titulo">
+                  <h1 class="init-titulo">Mi perfil</h1>
+              </div>
+              <div class="nombre esp">
+                  <div class="label">
+                      <p>Nombre del usuario</p>
+                  </div>
+                  <div class="placeholder">
+                      <p class="nom">'Aqui va el nombre'</p>
+                  </div>
+              </div>
+              <div class="opciones">
+                <div class="btn-carrito">
+                  <a href="/detalles-usuario/informacion" class="btn-crear">Informacion del usuario</a>
+                </div>
+                <div class="btn-carrito">
+                  <a href="#" class="btn-crear">Ver Carrito de compra</a>
+                </div>
+                <div class="btn-carrito">
+                  <a href="#" class="btn-crear">Direccion de envio</a>
+                </div>
+                <div class="btn-carrito">
+                  <a href="/detalles-usuario/tarjeta" class="btn-crear">Informacion de tarjeta</a>
+                </div>
+              </div>
+              <form>
+                <div class="eliminar">
+                  <input type="submit" class="cerrar"  value="Eliminar Cuenta">
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+          <div class="contenedor-form2 sombra">
+            <div class="datos">
+              <div class="datos t2">
+                  <h1 class="init-titulo">Informacion de la tarjeta</h1>
+              </div>
+              <form class="formulario" id="formulario" >
+                <fieldset>
+                    <div class="campos esp">
+                        <div class="titular esp">
+                            <label for="txtNombre" class="formulario-label">*Nombre del titular</label>
+                            <input type="text" id="txtNombre" class="nombre" placeholder="Ingrese el nombre del titular de la cuenta"/>
+                            <div class="mensaje-error">
+                              <p>Error message</p>
+                            </div>
+                        </div>
+                        <div class="numero esp">
+                          <label for="txtNumero" class="formulario-label">*Numero de tarjeta</label>
+                          <input type="text" id="txtNumero" class="n-tarjeta" placeholder="Ingrese el numero de tarjeta"/>
+                          <div class="mensaje-error">
+                            <p>Error message</p>
+                          </div>
+                        </div>
+                        <div class="fecha-codigo">
+                            <div class="fecha">
+                              <label for="txtFecha" class="formulario-label">*Fecha de expiracion</label>
+                              <div class="cad">
+                                <div class="mes esp">
+                                  <!-- <input type="s" id="txtMes" class="fecha" placeholder="Ingrese su nombre"/> -->
+                                  <select name="mes" id="txtMes" class="">
+                                    <option value="mes" selected disabled>Mes</option>
+                                  </select>
+                                  <div class="mensaje-error">
+                                    <p>Error message</p>
+                                  </div>
+                                </div>
+                                <div class="año esp">
+                                  <select name="año" id="txtAño" class=""></select>
+                                  <div class="mensaje-error">
+                                    <p>Error message</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="codigo esp">
+                              <label for="txtCodigo" class="formulario-label">*Codigo de seguridad</label>
+                              <input type="text" id="txtCodigo" class="c-seguridad" placeholder="Ingrese el codigo"/>
+                              <div class="mensaje-error">
+                                <p>Error message</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmar">
+                        <input type="submit" class="cerrar"  value="Confirmar">
+                      </div>
+                </fieldset>
+            </form>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+<script src="/js/tarjeta.js"></script>
+<script src="/js/datos.js"></script>

@@ -1,0 +1,56 @@
+<head>
+    <link rel="preload" href="css/estilod.css" as="style" />
+    <link href="css/estilod.css" rel="stylesheet">
+</head>
+<body>
+    <section class="contenedor sombra">
+        <form class="formulario">
+              <p>Dirección de envío</p> 
+              <hr>
+              <div class="campos">
+                  <div class="campo" id="cloc">
+                      <label for="txtLocalidad">*Localidad</label>
+                      <input class="input-campos" type="text" name="loc" id="txtLocalidad" placeholder="Ingrese su localidad">
+                  </div>
+                  <div class="campo" id="cest">
+                      <label for="txtEstado">*Estado</label>
+                      <input class="input-campos" type="text" name="est" id="txtEstado" placeholder="Ingrese su estado">
+                  </div>
+                  <div class="campo" id="ccp">
+                      <label for="txtCP">*Código Postal</label>
+                      <input class="input-campos" type="text" name="cp" id="txtCP" placeholder="Ingrese su CP">
+                  </div>
+                  <div class="campo" id="cnumc">
+                      <label for="txtNumc">*Número de contacto</label>
+                      <input class="input-campos" type="text" name="numc" id="txtNumc" placeholder="Ingrese su número celular">
+                  </div>
+                  <div class="campo" id="cmun">
+                      <label for="txtMunicipio">*Municipio</label>
+                      <input class="input-campos" type="text" name="mun" id="txtMunicipio" placeholder="Ingrese su municipio">
+                  </div>
+                  <div class="campo" id="ccol">
+                      <label for="txtColonia">*Colonia</label>
+                      <input class="input-campos" type="text" name="col" id="txtColonia" placeholder="Ingrese su colonia">
+                  </div>
+                  <div class="campo" id="ccall">
+                      <label for="txtCalle">*Calle</label>
+                      <input class="input-campos" type="text" name="call" id="txtCalle" placeholder="Ingrese su calle">
+                  </div>
+                  <div class="campo" id="cnum">
+                      <label for="txtNum">*Número</label>
+                      <input class="input-campos" type="text" name="num" id="txtNum" placeholder="Ingrese su número">
+                  </div>
+                  <div class="campo" id="cind">
+                      <label for="txtIndicaciones">Indicaciones adicionales</label>
+                      <textarea class="input-campos" name="ind" id="txtIndicaciones"></textarea>
+                  </div>
+              </div>
+              <div class="botones">
+                <input type="submit" class="boton-regresar" value="Regresar al carrito">
+                <input type="submit" class="boton-confirmar" value="Confirmar dirección">
+              </div>
+        </form>
+    </section>
+</body>
+    <script src="js/vfd.js"></script>
+    <script src="js/mh.js"></script>

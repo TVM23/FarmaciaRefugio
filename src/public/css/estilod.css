@@ -1,0 +1,176 @@
+:root{
+    --primario: #6774F1;
+    --primario-oscuro: #4C56BD;
+    --rojo: #C70000;
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --gris: #757575;
+    --gris_claro: #F7F7F7;
+}
+
+/* Generales */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{ 
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'serif', sans-serif;
+    background-image: linear-gradient(to top, var(--grisazulado) 0%, var(--blanco) 100%);
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.contenedor
+{
+    max-width: 60rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.sombra
+{
+    box-shadow: 3px 5px 15px 3px rgba(112, 112, 112, .5);
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    border: solid 1px black;
+}
+
+p
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin: 0%;
+    margin-bottom: .5rem;
+}
+
+.formulario fieldset
+{
+    border: none;
+    margin-top: 0%;
+}
+
+hr
+{
+    margin-bottom: 2rem;
+}
+
+.campos
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.campo
+{
+    margin-bottom: 1.5rem;
+}
+
+.campo label
+{
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.campo:nth-child(9)
+{
+    grid-column: 1 / -1;
+}
+
+.campo textarea
+{
+    height: 10rem;
+}
+
+.campo .input-campos 
+{
+    border: solid 1px #B8B8B8;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.incorrecto .input-campos
+{
+    border: 1px solid red;
+}
+
+.correcto .input-campos
+{
+    border: 1px solid green;
+}
+
+.botones
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones .boton-regresar
+{
+    padding: .5rem 4rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2rem;
+    border:solid 1px var(--primario);
+    color: var(--primario);
+    background-color: var(--blanco);
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botones .boton-confirmar
+{
+    padding: .5rem 4rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2rem;
+    border:solid 1px var(--primario);
+    color: var(--blanco);
+    background-color: var(--primario);
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (max-width:900px)
+{ 
+    .campos
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .contenedor
+    {
+        max-width: 90%;
+    }
+
+    .menu-abajo
+    {
+        display: none;
+    }
+}

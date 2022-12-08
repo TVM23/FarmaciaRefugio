@@ -1,0 +1,100 @@
+<head>
+    <link rel="preload" href="/css/principal.css" as="style" />
+    <link rel="stylesheet" href="/css/principal.css" />
+</head>
+<body>
+  <section class="cuerpo">
+        <!-- Slideshow contenedor -->
+    <div class="slideshow-container">
+
+      <!-- Imagenes -->
+      <div class="mySlides mySlides1 fade">
+        <a href="#"><img src="/img/slider02-Prevencion-4sem-d-v4@2x.jpg"></a>
+      </div>
+      
+      <div class="mySlides mySlides1 fade">
+        <a href="#"><img src="/img/slider-Senosiain-d-Oct-2q-v1.jpg" ></a>
+      </div>
+
+      <div class="mySlides mySlides1 fade">
+        <a href="#"><img src="/img/banner-43-Oct-d-v1.jpg" ></a>
+      </div>
+
+      <!-- Botones de recorrido -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Puntos -->
+    <div class="puntos" style="text-align:center">
+      <span class="dot dot1" onclick="currentSlide(1)"></span>
+      <span class="dot dot1" onclick="currentSlide(2)"></span>
+      <span class="dot dot1" onclick="currentSlide(3)"></span>
+    </div>
+
+
+<!-- -------------------------------
+    Contenedor de destacados -->
+
+    <div class="contenedor cont-prod sombra">
+      <div class="titulo">
+        <h1>Lo mas destacado</h1>
+      </div>
+      <div class="productos">
+        <div class="slideshow-container2" id="slides-padre">
+            <!-- Botones de recorrido -->
+            <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <!-- Puntos -->
+        <div style="text-align:center" id="contenedor-dots">
+        
+        </div>
+      </div>
+    </div>
+
+<!-- --------------Imagenes estaticas ------------------>
+
+    <div class="img-estaticas contenedor-img-e">
+      <div class="img-e">
+        <a href="#">
+          <img src="/img/syndet-eucerin-6octubre.jpg">
+        </a>
+      </div>
+      <div class="img-e">
+        <a href="#">
+          <img src="/img/Trade-Chinoin-2q-Oct-v1.jpg">
+        </a>
+      </div>
+    </div>
+
+
+
+
+          <!-- -------------------------------
+    Contenedor de ofertas -->
+
+    <div class="contenedor cont-prod sombra">
+      <div class="titulo">
+        <h1>Ofertas</h1>
+      </div>
+      <div class="productos">
+        <div class="slideshow-container3" id="slides-padre2">
+          <!-- Botones de recorrido -->
+            <a class="prev2" onclick="plusSlides3(-1)">&#10094;</a>
+            <a class="next2" onclick="plusSlides3(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <!-- Puntos -->
+        <div style="text-align:center" id="contenedor-dots2">
+        
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+<script src="/js/principal.js"></script>
