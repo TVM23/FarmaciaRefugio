@@ -3,7 +3,8 @@ mongoose.set('strictQuery', false);
 
 const conectarDB = async () => {
     try {
-        const db = await mongoose.connect(process.env.MONGO_URI, {
+        /* const db = await mongoose.connect(process.env.MONGO_URI, { */
+        const db = await mongoose.connect('mongodb+srv://ad-t23:519.Itj@clusteritj.jsn9u39.mongodb.net/prueba', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
