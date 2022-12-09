@@ -141,16 +141,9 @@ h1, h2, h3{
 
     outline: none;
 }
-.cad{
-    display: flex;
-}
-
-.mes{
-    width: 100%;
-}
 
 .mes select{
-    width: 100%;
+    width: 10rem;
     height: 4rem;
     border-radius: 1rem;
     border: 0.10rem solid;
@@ -162,18 +155,10 @@ h1, h2, h3{
 
     margin-left: 0;
     margin-right: auto;
-
-    display: flex;
-    justify-content: flex-start;
-}
-
-.año{
-    width: 100%;
-    margin-left: 1rem;
 }
 
 .año select{
-    width: 100%;
+    width: 10rem;
     height: 4rem;
     border-radius: 1rem;
     border: 0.10rem solid;
@@ -185,9 +170,6 @@ h1, h2, h3{
 
     margin-left: auto;
     margin-right: 0;
-
-    display: flex;
-    justify-content: flex-end;
 }
 
 /* .mes select:hover,

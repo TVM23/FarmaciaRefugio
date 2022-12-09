@@ -11,7 +11,9 @@ const {
     renderTarjeta, 
     renderProducto, 
     renderDatos, 
-    renderDatosTarjeta} = indexController;
+    renderDatosTarjeta,
+    renderNosotros,
+    renderMetodoPago} = indexController;
 
 const router = express.Router();
 
@@ -23,13 +25,15 @@ router.get('/iniciar-sesion', renderInicioSesion)
 
 router.get('/recuperar-clave', renderOlvidarContra)
 
-router.get('/recuperar-clave', renderOlvidarContra)
-
 router.get('/contacto', renderContacto)
+
+router.get('/nosotros', renderNosotros)
 
 router.get('/direccion-envio', renderDireccion)
 
-router.get('/detalles-tarjeta', renderTarjeta)
+router.get('/pago/metodo', renderMetodoPago)
+
+router.get('/pago/detalles-tarjeta', renderTarjeta)
 
 router.get('/informacion-producto', renderProducto)
 

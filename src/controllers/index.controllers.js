@@ -24,8 +24,12 @@ indexController.renderDireccion = (req, res)=>{
     res.render('direccion')
 }
 
+indexController.renderMetodoPago = (req, res)=>{
+    res.render('pago/metodo')
+}
+
 indexController.renderTarjeta = (req, res)=>{
-    res.render('tarjeta')
+    res.render('pago/tarjeta')
 }
 
 indexController.renderProducto = (req, res)=>{
@@ -39,4 +43,9 @@ indexController.renderProducto = (req, res)=>{
 indexController.renderDatosTarjeta = (req, res)=>{
     res.render('usuarios/datos-tarjeta')
 } */
+
+indexController.renderNosotros = (req, res)=>{
+    res.render('nosotros')
+}
+
 export default indexController;

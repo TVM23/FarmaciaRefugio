@@ -60,6 +60,30 @@ const usuarioSchema = mongoose.Schema({
         type: String,
         trim: true
     },
+    metodoPago:{
+        type: String,
+        trim: true
+    },
+    titular:{
+        type: String,
+        trim: true
+    },
+    numeroTarjeta:{
+        type: String,
+        trim: true
+    },
+    mesExp:{
+        type: String,
+        trim: true
+    },
+    añoExp:{
+        type: String,
+        trim: true
+    },
+    CVV:{
+        type: String,
+        trim: true
+    },
     token:{
         type: String
     },

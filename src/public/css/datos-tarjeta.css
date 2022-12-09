@@ -177,7 +177,6 @@ h1, h2, h3{
     width: 20rem;
 }
 
-
 .eliminar{
     display: flex;
     justify-content: center;
@@ -369,7 +368,6 @@ h1, h2, h3{
 .mensaje-error.error{
     visibility: visible;
 }
-
 
 .fecha-codigo{
     display: flex;

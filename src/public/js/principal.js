@@ -241,7 +241,7 @@ function llenarOfertas(){
     // cadena.innerHTML = "<p>"+producto.nombre+"</p>"+
     cadena.innerHTML = ""+
     "<div class='img-med'>"+
-    " <a href='#'>"+
+    " <a href='/informacion-producto'>"+
     "   <img class='imagen' src="+ofertas.imagen+">"+
     " </a>"+
     "</div>"+

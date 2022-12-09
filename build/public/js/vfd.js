@@ -1,13 +1,14 @@
-const formulario = document.querySelector(".formulario");
-const inputs = document.querySelectorAll(".formulario input");
-const expresiones = {
+"use strict";
+
+var formulario = document.querySelector(".formulario");
+var inputs = document.querySelectorAll(".formulario input");
+var expresiones = {
   letesp: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
   telefono: /^\d{10,15}$/,
   cp: /^\d{5}$/,
-  num: /^\d{1,5}$/,
+  num: /^\d{1,5}$/
 };
-
-const campos = {
+var campos = {
   loc: false,
   est: false,
   cp: false,
@@ -15,10 +16,9 @@ const campos = {
   mun: false,
   col: false,
   call: false,
-  num: false,
+  num: false
 };
-
-const validarFormulario = (e) => {
+var validarFormulario = function validarFormulario(e) {
   switch (e.target.name) {
     case "loc":
       if (expresiones.letesp.test(e.target.value)) {
@@ -109,25 +109,13 @@ const validarFormulario = (e) => {
       break;
   }
 };
-
-inputs.forEach((input) => {
+inputs.forEach(function (input) {
   input.addEventListener("keyup", validarFormulario);
   input.addEventListener("blur", validarFormulario);
 });
-
-formulario.addEventListener("submit", (e) => {
+formulario.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (
-    campos.loc &&
-    campos.est &&
-    campos.cp &&
-    campos.numc &&
-    campos.loc &&
-    campos.mun &&
-    campos.col &&
-    campos.call &&
-    campos.num
-  ) {
+  if (campos.loc && campos.est && campos.cp && campos.numc && campos.loc && campos.mun && campos.col && campos.call && campos.num) {
     formulario.reset();
     e.currentTarget.submit();
   } else alert("Hay campos vacios o incorrectos.");

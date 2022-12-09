@@ -49,7 +49,7 @@ function setCookie(cname, cvalue, exdays) {
   document.addEventListener("DOMContentLoaded", function(event) {
     if(Fbcookie==='')
         if(Gocookie==='')
-            console.log('se agarro google')
+            console.log('Google')
         else   
             loginGoogle();
     else

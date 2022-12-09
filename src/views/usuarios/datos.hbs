@@ -15,7 +15,7 @@
                       <p>Nombre del usuario</p>
                   </div>
                   <div class="placeholder">
-                      <p class="nom">'Aqui va el nombre'</p>
+                      <p class="nom">`{{usuario.nombreUsuario}}+{{usuario.apellidosUsuario}}`</p>
                   </div>
               </div>
               <div class="opciones">
@@ -51,7 +51,8 @@
                       <p>Nombre</p>
                   </div>
                   <div class="placeholder">
-                      <p class="nomb">'Aqui va el nombre'</p>
+                      {{!-- <p class="nomb">'Aqui va el nombre'</p> --}}
+                      <p class="nomb">{{usuario.nombreUsuario}}</p>
                   </div>
               </div>
               <div class="apellidos esp">
@@ -93,7 +94,7 @@
               </div>
               <form>
                 <div class="cerrar">
-                  <input type="submit" class="cerrar"  value="Cerrar sesion">
+                  <input type="submit" class="cerrar" value="Cerrar sesion">
                 </div>
               </form>
             </div>

@@ -231,7 +231,8 @@ h1, h2, h3{
 }
 
 .ingresar input{
-    border-radius: 20rem;
+    border-radius: 0.5rem;
+    /* border-radius: 20px; */
     height: 3.4rem;
     width: 100%;
     margin: 0.5rem;
@@ -274,11 +275,11 @@ h1, h2, h3{
 }
 
 .google input{
+    display: none;
     border: none;
     color: var(--blanco);
     background-color: var(--azulGoogle);
     cursor: pointer;
-    display: none;
 }
 
 .crear-cuenta{
@@ -334,7 +335,7 @@ h1, h2, h3{
     }
 
     .cont{
-        width: 26rem;
+        width: 26rem
     }
     
 }
@@ -346,7 +347,7 @@ h1, h2, h3{
     }
 
     .cont{
-        width: 26rem;
+        width: 26rem
     }
 
     .nombre-usuario{

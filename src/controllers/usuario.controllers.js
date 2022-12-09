@@ -30,9 +30,10 @@ usuarioController.crearUsarioNuevo = async (req, res)=>{
 
 //Mostrar info usuario
 usuarioController.renderDatos = async (req, res)=>{
-    //res.render('usuarios/datos');
-    const datos = await Usuario.find();
-    res.render('usuarios/datos');
+    const { correo } = req.body;
+    //Buscar el cliente
+    const usuario = await Usuario.findOne({emailUsuario: correo });
+    res.render('usuarios/datos', {usuario});
 }
 
 usuarioController.renderDatosTarjeta = (req, res)=>{
@@ -44,8 +45,6 @@ usuarioController.renderDatosTarjeta = (req, res)=>{
 usuarioController.updateTarjeta = (req, res)=>{
     res.send('editar tarjeta')
 }
-
-
 
 //Eliminar usuario
 usuarioController.deleteUsuario = (req, res)=>{
