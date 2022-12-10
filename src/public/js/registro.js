@@ -118,7 +118,6 @@ function checkInputs(){
 
     if(cont==6){
         ban=true;
-        /* window.location = '/index.html' */
     }
 }
 
