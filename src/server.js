@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 import indexRoutes from './routes/index.routes.js';
 import usuarioRoutes from './routes/usuario.routes.js';
 import morgan from 'morgan';
+import methodOverride from 'method-override'
 
 //Inicializacion
 const app = express();
@@ -29,6 +30,7 @@ app.set('view engine', '.hbs');
 //Middlewares
 app.use(express.urlencoded({extended: false}));
 app.use(morgan('dev'))
+app.use(methodOverride('_method'))
 
 //Routes
 app.use(indexRoutes);

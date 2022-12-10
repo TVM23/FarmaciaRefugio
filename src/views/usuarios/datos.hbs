@@ -15,7 +15,15 @@
                       <p>Nombre del usuario</p>
                   </div>
                   <div class="placeholder">
-                      <p class="nom">`{{usuario.nombreUsuario}}+{{usuario.apellidosUsuario}}`</p>
+                      <p class="nom">{{nombreUsuario}}{{apellidosUsuario}}</p>
+                  </div>
+              </div>
+              <div class="id esp">
+                  <div class="label">
+                      <p>Id del usuario</p>
+                  </div>
+                  <div class="placeholder">
+                      <p class="nom">{{_id}}</p>
                   </div>
               </div>
               <div class="opciones">
@@ -32,7 +40,8 @@
                   <a href="/detalles-usuario/tarjeta" class="btn-crear">Informacion de tarjeta</a>
                 </div>
               </div>
-              <form>
+              <form action="/detalles-usuario/tarjeta/delete/{{_id}}?_method=DELETE" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
                 <div class="eliminar">
                   <input type="submit" class="cerrar"  value="Eliminar Cuenta">
                 </div>
@@ -52,7 +61,7 @@
                   </div>
                   <div class="placeholder">
                       {{!-- <p class="nomb">'Aqui va el nombre'</p> --}}
-                      <p class="nomb">{{usuario.nombreUsuario}}</p>
+                      <p class="nomb">{{nombreUsuario}}</p>
                   </div>
               </div>
               <div class="apellidos esp">
@@ -61,7 +70,7 @@
                   </div>
                   <div class="placeholder">
                       {{!-- <p class="nom">'Aqui va los apellidos'</p> --}}
-                      <p class="nom">{{usuario.apellidosUsuario}}</p>
+                      <p class="nom">{{apellidosUsuario}}</p>
                   </div>
               </div>
               <div class="correo esp">
@@ -70,7 +79,7 @@
                   </div>
                   <div class="placeholder">
                      {{!--  <p class="email">'Aqui va el correo'</p> --}}
-                     <p class="email">{{usuario.emailUsuario}}</p>
+                     <p class="email">{{emailUsuario}}</p>
                   </div>
               </div>
               <div class="numero esp">
@@ -79,7 +88,7 @@
                   </div>
                   <div class="placeholder">
                       {{!-- <p class="telefono">'Aqui va el numero'</p> --}}
-                      <p class="telefono">{{usuario.telefonoUsuario}}</p>
+                      <p class="telefono">{{telefonoUsuario}}</p>
                   </div>
               </div>
               <div class="fecha esp">
@@ -87,12 +96,15 @@
                       <p>Fecha de creacion de cuenta</p>
                   </div>
                   <div class="placeholder">
-                      <p class="fcCreacion">'fecha de la creacion de cuenta'</p>
+                      {{!-- <p class="fcCreacion">'fecha de la creacion de cuenta'</p> --}}
+                      <p class="fcCreacion">{{timestamps}}</p>
                   </div>
               </div>
               <div class="forma-login esp">
                   <div class="label ap">
-                      <p>Esta cuenta fue creada: <span class="forma">'addf'</span></p>
+                      {{!-- <p>Esta cuenta fue creada: <span class="forma">'addf'</span></p> --}}
+                      <p>Esta cuenta fue creada: <span class="forma">{{metodoCreacion}}</span></p>
+                  </div>
                   </div>
               </div>
               <form>

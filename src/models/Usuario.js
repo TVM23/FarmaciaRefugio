@@ -84,6 +84,10 @@ const usuarioSchema = mongoose.Schema({
         type: String,
         trim: true
     },
+    metodoCreacion:{
+        type: String,
+        default: 'de forma directa'
+    },
     token:{
         type: String
     },
