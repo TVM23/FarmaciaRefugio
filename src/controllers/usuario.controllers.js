@@ -21,10 +21,10 @@ usuarioController.crearUsarioNuevo = async (req, res)=>{
         console.log("Mensaje", req.body);
         const usuarioGuardado = await usuario.save();
         res.json(usuarioGuardado);
+        res.render('index');
     } catch (error) {
         console.log('Error',  error);
     }
-    res.render('index');
 
 }
 
