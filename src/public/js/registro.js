@@ -47,7 +47,7 @@ formulario.addEventListener('submit', e => {
 	checkInputs();
     if(ban==true){
         formulario.submit();
-        window.location = '/'
+        /* window.location = '/' */
     }
 })
 

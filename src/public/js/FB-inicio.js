@@ -80,6 +80,6 @@ window.fbAsyncInit = function() {
 
 function closeLogin(){
     if(Fbcookie != ''){
-        window.location = '/'
+        /* window.location = '/' */
     }
 }
