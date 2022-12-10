@@ -41,7 +41,7 @@ const confcontra = document.getElementById('txtConfContra');
 var ban = false;
 
 
-formulario.addEventListener('submit', e => {
+formulario.addEventListener ('submit', e => {
     e.preventDefault();
     resetColor();
 	checkInputs();

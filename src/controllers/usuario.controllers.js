@@ -24,7 +24,7 @@ usuarioController.crearUsarioNuevo = async (req, res)=>{
     } catch (error) {
         console.log('Error',  error);
     }
-    //res.send('nuevo usuario');
+    res.render('index');
 
 }
 
