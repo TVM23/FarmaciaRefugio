@@ -9,7 +9,9 @@ const __dirname = path.dirname(__filename);
 import indexRoutes from './routes/index.routes.js';
 import usuarioRoutes from './routes/usuario.routes.js';
 import morgan from 'morgan';
-import methodOverride from 'method-override'
+import methodOverride from 'method-override';
+import flash from 'connect-flash';
+import session from 'express-session';
 
 //Inicializacion
 const app = express();
@@ -31,6 +33,19 @@ app.set('view engine', '.hbs');
 app.use(express.urlencoded({extended: false}));
 app.use(morgan('dev'))
 app.use(methodOverride('_method'))
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(flash());
+
+
+//Variables globales
+app.use((req, res, next) => {
+    res.locals.success_ms = req.flash('success_msg')
+    next();
+})
 
 //Routes
 app.use(indexRoutes);

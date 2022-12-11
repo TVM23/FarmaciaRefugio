@@ -16,6 +16,9 @@ router.get('/registro', renderRegistro)
 router.post('/registro/nuevo-usuario', crearUsarioNuevo)
 
 //Mostrar info usuarios
+/* router.get('/detalles-usuario/informacion/:id', renderDatos)
+ */
+
 router.get('/detalles-usuario/informacion', renderDatos)
 
 router.get('/detalles-usuario/tarjeta', renderDatosTarjeta)
@@ -27,7 +30,5 @@ router.put('/detalles-usuario/tarjeta/edit/:id', updateTarjeta)
 
 //Eliminiar usuario
 router.delete('/detalles-usuario/informacion/delete/:id', deleteUsuario)
-router.delete('/detalles-usuario/tarjeta/delete/:id', deleteUsuario)
-
 
 export default router;

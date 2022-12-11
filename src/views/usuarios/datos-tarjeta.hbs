@@ -46,19 +46,20 @@
               <div class="datos t2">
                   <h1 class="init-titulo">Informacion de la tarjeta</h1>
               </div>
-              <form class="formulario" id="formulario" >
+              <form class="formulario" id="formulario" action="/detalles-usuario/tarjeta/edit/{{usuario.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="_method" value="PUT">
                 <fieldset>
                     <div class="campos esp">
                         <div class="titular esp">
                             <label for="txtNombre" class="formulario-label">*Nombre del titular</label>
-                            <input type="text" id="txtNombre" class="nombre" placeholder="Ingrese el nombre del titular de la cuenta"/>
+                            <input type="text" id="txtNombre" class="nombre" placeholder="Ingrese el nombre del titular de la cuenta" name="titular" value="{{usuario.titular}}"/>
                             <div class="mensaje-error">
                               <p>Error message</p>
                             </div>
                         </div>
                         <div class="numero esp">
                           <label for="txtNumero" class="formulario-label">*Numero de tarjeta</label>
-                          <input type="text" id="txtNumero" class="n-tarjeta" placeholder="Ingrese el numero de tarjeta"/>
+                          <input type="text" id="txtNumero" class="n-tarjeta" placeholder="Ingrese el numero de tarjeta" name="numeroTarjeta" value="{{usuario.numeroTarjeta}}"/>
                           <div class="mensaje-error">
                             <p>Error message</p>
                           </div>
@@ -69,7 +70,7 @@
                               <div class="cad">
                                 <div class="mes esp">
                                   <!-- <input type="s" id="txtMes" class="fecha" placeholder="Ingrese su nombre"/> -->
-                                  <select name="mes" id="txtMes" class="">
+                                  <select name="mes" id="txtMes" class=""  name="mesExp" value="{{usuario.mesExp}}">
                                     <option value="mes" selected disabled>Mes</option>
                                   </select>
                                   <div class="mensaje-error">
@@ -77,7 +78,7 @@
                                   </div>
                                 </div>
                                 <div class="año esp">
-                                  <select name="año" id="txtAño" class=""></select>
+                                  <select name="año" id="txtAño" class="" name="añoExp" value="{{usuario.añoExp}}"></select>
                                   <div class="mensaje-error">
                                     <p>Error message</p>
                                   </div>
@@ -86,7 +87,7 @@
                             </div>
                             <div class="codigo esp">
                               <label for="txtCodigo" class="formulario-label">*Codigo de seguridad</label>
-                              <input type="text" id="txtCodigo" class="c-seguridad" placeholder="Ingrese el codigo"/>
+                              <input type="text" id="txtCodigo" class="c-seguridad" placeholder="Ingrese el codigo" name="CVV" value="{{usuario.CVV}}"/>
                               <div class="mensaje-error">
                                 <p>Error message</p>
                               </div>
