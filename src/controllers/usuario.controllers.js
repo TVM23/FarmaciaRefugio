@@ -1,5 +1,10 @@
 import Usuario from '../models/Usuario.js'
+import express from 'express'
+
 const usuarioController = {}
+const app = express();
+
+import Swal from 'sweetalert2'
 
 //Registro Usuario
 usuarioController.renderRegistro = (req, res)=>{
@@ -12,24 +17,47 @@ usuarioController.crearUsarioNuevo = async (req, res)=>{
     const existeCliente = await Usuario.findOne({emailUsuario});
     if ( existeCliente ){
         const error = new Error(`El correo elctrónico ${emailUsuario} ya está registrado`);
-        /* return res.status(400).json({ 'mensaje': error.message }); */
-        return
+        req.flash('cuenta_repetida', 'El correo electronico ingresado ya esta registrado')
+        //return res.status(400).json({ 'mensaje': error.message });
+        res.redirect('/registro');
     }
 
     try {
         // Guardar el cliente
         const usuario = new Usuario({nombreUsuario, apellidosUsuario, emailUsuario, telefonoUsuario, passwordUsuario});
         /* console.log("Mensaje", req.body); */
-        const usuarioGuardado = await usuario.save();
+        usuario.passwordUsuario = await usuario.encryptPassword(passwordUsuario)
+        await usuario.save();
         /* res.json(usuarioGuardado); */
-        req.flash('success_msg', 'Usuario registrado con exito')
+        req.flash('success_msg', 'Usuario registrado con exito');
         res.redirect('/')
     } catch (error) {
         console.log('Error',  error);
     }
     /* res.redirect('/'); */
+}
+
+app.get('/registro', (req, res) => {
+	res.send(req.flash());
+});
+
+//Inicio de sesion
+usuarioController.renderInicioSesion = (req, res)=>{
+    res.render('usuarios/inicio-sesion')
+}
+
+usuarioController.verificacionInicioSesion = (req, res)=>{
+    res.send('usuarios/inicio-sesion')
+}
+
+usuarioController.renderOlvidarContra = (req, res)=>{
+    res.render('olvidar-contra')
+}
+
+usuarioController.logout = (req, res)=>{
 
 }
+
 
 //Mostrar info usuario
 usuarioController.renderDatos = async (req, res)=>{
@@ -60,4 +88,7 @@ usuarioController.deleteUsuario = async (req, res)=>{
     res.redirect('/');
 }
 
+
+
 export default usuarioController;
+

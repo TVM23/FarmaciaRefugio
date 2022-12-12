@@ -133,7 +133,6 @@ h1, h2, h3{
 .menu-abajo{
     background-color: var(--primario);
     margin-bottom: 1rem;
-    height: 73px;
 }
 
 .navegacion-hamburguesa{
@@ -144,8 +143,6 @@ h1, h2, h3{
     display: flex;
     justify-content: space-evenly;
     height: 6.3rem;
-    align-content: center;
-    justify-content: center;
 
     z-index: 1000;
 
@@ -155,9 +152,8 @@ h1, h2, h3{
 .navegacion-principal ul{
     list-style: none;
     display: flex;
-    align-content: center;
+    align-items: center;
     padding: 0;
-    justify-content: center;
 
     gap: 10rem;
 

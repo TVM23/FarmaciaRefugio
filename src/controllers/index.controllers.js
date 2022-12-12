@@ -4,17 +4,9 @@ indexController.renderIndex = (req, res)=>{
     res.render('index')
 }
 
-indexController.renderInicioSesion = (req, res)=>{
-    res.render('usuarios/inicio-sesion')
-}
-
 /* indexController.renderRegistrarUsuario = (req, res)=>{
     res.render('usuarios/registro')
 } */
-
-indexController.renderOlvidarContra = (req, res)=>{
-    res.render('olvidar-contra')
-}
 
 indexController.renderContacto = (req, res)=>{
     res.render('contacto')

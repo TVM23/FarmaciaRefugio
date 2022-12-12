@@ -19,11 +19,7 @@ const router = express.Router();
 
 router.get('/', renderIndex)
 
-router.get('/iniciar-sesion', renderInicioSesion)
-
 //router.get('/registro', renderRegistrarUsuario)
-
-router.get('/recuperar-clave', renderOlvidarContra)
 
 router.get('/contacto', renderContacto)
 

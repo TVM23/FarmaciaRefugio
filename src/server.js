@@ -40,12 +40,13 @@ app.use(session({
 }))
 app.use(flash());
 
-
 //Variables globales
 app.use((req, res, next) => {
-    res.locals.success_ms = req.flash('success_msg')
+    res.locals.success_msg = req.flash('success_msg')
+    res.locals.cuenta_repetida = req.flash('cuenta_repetida')
     next();
 })
+
 
 //Routes
 app.use(indexRoutes);

@@ -12,7 +12,6 @@ formulario.addEventListener('submit', e => {
 	checkInputs();
     if(ban==true){
         formulario.submit();
-        window.location = '/html/inicio-sesion.html'
     }
 })
 
@@ -85,4 +84,3 @@ document.getElementById('formulario').addEventListener('focusin', (event) => {
     /* event.target.value = ''; */
     removeErrorFor(event.target)
   });
-  

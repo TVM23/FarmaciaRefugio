@@ -9,12 +9,12 @@
                 <h1 class="init-titulo">Iniciar sesion</h1>
             </div>
             <div class="datos">
-                <form class="formulario" id="formulario">
+                <form class="formulario" id="formulario" action="/iniciar-sesion" method="POST">
                     <fieldset>
                         <div class="campos">
                             <div class="correo esp">
                                 <label for="txtCorreo" class="formulario-label">*Correo electrónico</label>
-                                <input type="text" id="txtCorreo" class="mail" placeholder="Ingrese su correo electronico" />
+                                <input type="text" id="txtCorreo" class="mail" placeholder="Ingrese su correo electronico" name="emailUsuario"/>
                                 <div class="mensaje-error" id="errorNombre">
                                   <p>Error message</p>
                                 </div>
@@ -22,7 +22,7 @@
                             <div class="contra">
                                 <label for="txtContra" class="formulario-label">*Contraseña</label>
                                 <div class="cont-pass esp">
-                                  <input type="password" id="txtContra" class="contraseña" placeholder="Ingrese su contraseña"/>
+                                  <input type="password" id="txtContra" class="contraseña" placeholder="Ingrese su contraseña" name="passwordUsuario"/>
                                   <div class="mensaje-error" id="errorNombre">
                                     <p>Error message</p>
                                   </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div id="signin" class="ingresar google" data-onsuccess="onSignIn">
                       <svg class="icon-go" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
-                      <input class="boton" type="button" value="Iniciar sesion con Google"" />
+                      <input class="boton" type="button" value="Iniciar sesion con Google" />
                     </div>
                     <div id="google-button" class="ingresar google"></div>
                     <div class="registro">
