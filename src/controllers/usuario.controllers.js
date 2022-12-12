@@ -1,10 +1,9 @@
-import Usuario from '../models/Usuario.js'
-import express from 'express'
+import Usuario from '../models/Usuario.js';
+import express from 'express';
+import passport from 'passport';
 
 const usuarioController = {}
 const app = express();
-
-import Swal from 'sweetalert2'
 
 //Registro Usuario
 usuarioController.renderRegistro = (req, res)=>{
@@ -46,9 +45,15 @@ usuarioController.renderInicioSesion = (req, res)=>{
     res.render('usuarios/inicio-sesion')
 }
 
-usuarioController.verificacionInicioSesion = (req, res)=>{
-    res.send('usuarios/inicio-sesion')
-}
+usuarioController.verificacionInicioSesion = passport.authenticate('local', {
+    failureRedirect: '/iniciar-sesion',
+    successRedirect: '/',
+    failureFlash: true
+});
+
+app.get('/iniciar-sesion', (req, res) => {
+	res.send(req.flash());
+});
 
 usuarioController.renderOlvidarContra = (req, res)=>{
     res.render('olvidar-contra')

@@ -12,11 +12,14 @@ import morgan from 'morgan';
 import methodOverride from 'method-override';
 import flash from 'connect-flash';
 import session from 'express-session';
+import passport from "passport";
+
 
 //Inicializacion
 const app = express();
 dotenv.config();//Agarra el enlace de la db
 conectarDB();
+import './config/passport.js';
 
 //Setting
 app.set('port', process.env.PORT || 4000)
@@ -38,12 +41,15 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }))
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 
 //Variables globales
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.cuenta_repetida = req.flash('cuenta_repetida')
+    res.locals.error = req.flash('error')
     next();
 })
 
