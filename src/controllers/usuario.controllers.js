@@ -59,17 +59,25 @@ usuarioController.renderOlvidarContra = (req, res)=>{
     res.render('olvidar-contra')
 }
 
-usuarioController.logout = (req, res)=>{
+usuarioController.logout = (req, res, next)=>{
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        req.flash('cerrar_sesion', 'Usuario registrado con exito');
+        res.redirect('/');
+    });
 
 }
+app.get('/', (req, res) => {
+	res.send(req.flash('cerrar_sesion'));
+});
 
 
 //Mostrar info usuario
 usuarioController.renderDatos = async (req, res)=>{
-    const { correo } = req.body;
+    /* const { correo } = req.body; */
     //Buscar el cliente
-    const usuario = await Usuario.findOne({emailUsuario: correo });
-    res.render('usuarios/datos', {usuario});
+    /* const usuario = await Usuario.findOne({emailUsuario: correo }); */
+    res.render('usuarios/datos', /* {usuario} */);
 }
 
 usuarioController.renderDatosTarjeta = async (req, res)=>{

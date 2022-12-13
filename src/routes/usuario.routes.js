@@ -1,5 +1,9 @@
 import express from 'express'
 import usuarioController from '../controllers/usuario.controllers.js';
+import helpers from '../helpers/auth.js';
+
+const {isAuthenticated} = helpers;
+
 const {
     renderRegistro, 
     crearUsarioNuevo, 
@@ -26,22 +30,22 @@ router.post('/iniciar-sesion', verificacionInicioSesion)
 
 router.get('/recuperar-clave', renderOlvidarContra)
 
-router.get('/logout', logout)
+router.get('/logout', isAuthenticated, logout)
 
 //Mostrar info usuarios
 /* router.get('/detalles-usuario/informacion/:id', renderDatos)
  */
 
-router.get('/detalles-usuario/informacion', renderDatos)
+router.get('/detalles-usuario/informacion', isAuthenticated, renderDatos)
 
-router.get('/detalles-usuario/tarjeta', renderDatosTarjeta)
+router.get('/detalles-usuario/tarjeta', isAuthenticated, renderDatosTarjeta)
 
 //Editar info usuario
 //Editar tarjeta
-router.put('/detalles-usuario/tarjeta/edit/:id', updateTarjeta)
+router.put('/detalles-usuario/tarjeta/edit/:id', isAuthenticated, updateTarjeta)
 
 
 //Eliminiar usuario
-router.delete('/detalles-usuario/informacion/delete/:id', deleteUsuario)
+router.delete('/detalles-usuario/informacion/delete/:id', isAuthenticated, deleteUsuario)
 
 export default router;

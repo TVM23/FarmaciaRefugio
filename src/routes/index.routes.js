@@ -1,5 +1,8 @@
 import express from 'express'
 import indexController from '../controllers/index.controllers.js';
+import helpers from '../helpers/auth.js';
+
+const {isAuthenticated} = helpers;
 
 const {
     renderIndex, 
@@ -25,11 +28,11 @@ router.get('/contacto', renderContacto)
 
 router.get('/nosotros', renderNosotros)
 
-router.get('/direccion-envio', renderDireccion)
+router.get('/direccion-envio', isAuthenticated, renderDireccion)
 
-router.get('/pago/metodo', renderMetodoPago)
+router.get('/pago/metodo', isAuthenticated, renderMetodoPago)
 
-router.get('/pago/detalles-tarjeta', renderTarjeta)
+router.get('/pago/detalles-tarjeta',isAuthenticated, renderTarjeta)
 
 //router.get('/informacion-producto', renderProducto)
 
