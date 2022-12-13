@@ -22,7 +22,7 @@
             Swal.fire({
             title: 'Atencion',
             text: 'Este correo ya esta registrado',
-            icon: 'error',
+            icon: 'warning',
             confirmButtonText: 'Entendido'
           })
         </script>
@@ -33,6 +33,16 @@
             title: 'Atencion',
             text: `{{error}}`,
             icon: 'error',
+            confirmButtonText: 'Entendido'
+          })
+        </script>
+    {{/if}}
+    {{#if cerrar_sesion}}
+        <script>
+            Swal.fire({
+            title: 'Atencion',
+            text: 'Se ha cerrado la sesion con exito',
+            icon: 'info',
             confirmButtonText: 'Entendido'
           })
         </script>

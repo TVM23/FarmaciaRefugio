@@ -39,7 +39,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(morgan('dev'))
 app.use(methodOverride('_method'))
 app.use(session({
-    secret: 'secret',
+    secret: 'un gran secerto bastante original',
     resave: true,
     saveUninitialized: true
 }))
@@ -52,6 +52,7 @@ app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.cuenta_repetida = req.flash('cuenta_repetida')
     res.locals.error = req.flash('error')
+    res.locals.user = req.user || null;
     next();
 })
 
