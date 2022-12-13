@@ -12,6 +12,15 @@ productoController.obtenerProductosTodos = async (req, res)=>
     res.render('productos', {productos});
 }
 
+productoController.obtenerProducto = async (req, res)=>
+{   
+    const producto =  await Producto.findById(req.params.id).lean();
+    console.log(producto);
+   /*  res.json(productos); */
+
+    res.render('producto', { producto });
+}
+
 export default productoController;
 
 
