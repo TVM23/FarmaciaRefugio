@@ -36,7 +36,7 @@
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
     "dotenv": "^16.0.3",
-    "handlebars": "^4.7.7",
+    "handlebars": "^4.5.0",
     "nodemon": "^2.0.20",
     "npm-check-updates": "^16.4.3"
   }

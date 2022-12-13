@@ -1,0 +1,54 @@
+
+<head>
+    <title>Productos</title>
+    <link rel="preload" href="css/estilosprod.css" as="style" />
+    <link href="css/estilosprod.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="contenedor">
+        <div class="laterali">
+            <label>Sección</label>
+            
+        </div>
+        <div class="laterald">
+          <div class="productos" id="lista-productos">
+            <!-- Inicio de producto -->
+            {{#each productos}}
+                <div class="contenedor-producto">
+                    <div class="imagen">
+                      <img src="/img/medicamentos/antibioticos/{{productoImagen}}"/>
+                    </div>   
+                    <div class="info">
+                      <p class="texto nombre">{{productoNombre}}</p>
+                      <p class="texto extra">{{productoExtra}}</p>
+                      <p class="precio">${{productoPrecio}}.00</p>
+                      <a href="#" class="boton">Agregar al carrito</a>
+                    </div>
+                </div>
+            {{/each}}
+            <!-- Fin de producto -->
+    
+          </div>
+        </div>
+    </section>
+</body>
+{{!-- <script src="js/script-productos.js"></script> --}}
+</html>
+
+{{!-- 
+"idProducto": 1002,
+  "idCategoria": {
+    "idCategoria": 100,
+    "nombreCategoriaProducto": "Antibioticos"
+  },
+  "productoNombre": "Ampicilina",
+  "productoExtra": "Caja con 20 tabletas 500 mg",
+  "productoPrecio": 45.00,
+  "productoDescuento": 0,
+  "productoDescripcion": "Se usa para tratar determinadas infecciones que son ocasionadas por una bacteria",
+  "productoInstrucciones": "Via de administración oral",
+  "productoDosis": "De acuerdo a el medico",
+  "productoCompuesto": "Penicilina semisintética",
+  "productoContenido": "Caja con 20 de tabletas 500 mg",
+  "productoImagen": "ampicilina.webp" 
+  --}}
