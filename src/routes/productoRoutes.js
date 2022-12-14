@@ -4,11 +4,13 @@ const router = express.Router();
 
 const 
 {
-    obtenerProductosTodos
+    obtenerProductosTodos,
+    obtenerProducto
 } = productoController;
 
 // Filtrado
 
 router.get('/productos', obtenerProductosTodos ); // /:idCategoria Indicamos que podemos recibir arametros por la cadena de consulta
+router.get('/informacion-producto/:id', obtenerProducto);
 
 export default router;

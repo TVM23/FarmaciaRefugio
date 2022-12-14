@@ -25,7 +25,7 @@ indexController.renderTarjeta = (req, res)=>{
 }
 
 indexController.renderProducto = (req, res)=>{
-    res.render('producto')
+    // res.render('producto')
 }
 
 /* indexController.renderDatos = (req, res)=>{

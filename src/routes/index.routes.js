@@ -34,7 +34,7 @@ router.get('/pago/metodo', isAuthenticated, renderMetodoPago)
 
 router.get('/pago/detalles-tarjeta',isAuthenticated, renderTarjeta)
 
-router.get('/informacion-producto', renderProducto)
+//router.get('/informacion-producto', renderProducto)
 
 //router.get('/detalles-usuario/informacion', renderDatos)
 

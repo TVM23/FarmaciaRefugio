@@ -11,7 +11,7 @@
         <div class="producto">
           <div class="imagen-datos">
             <div class="imagen">
-              <img src="/img/medicamentos/pepto-bismol.webp" />
+              <img src="/img/medicamentos/antibioticos/{{producto.productoImagen}}" />
               <div class="agg-carrito">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -35,15 +35,14 @@
             </div>
             <div class="datos">
               <div class="nombre">
-                <p>Pepto-Bismol 24 Tabletas</p>
+                <p>{{producto.productoNombre}}</p>
               </div>
               <div class="precio">
-                <p>$50.00 MXN p/u</p>
+                <p>${{producto.productoPrecio}}.00 MXN p/u</p>
               </div>
               <div class="descripcion-r">
                 <p>
-                  Pepto Bismol ayuda a aliviar los síntomas de acidez,
-                  indigestión, diarrea, malestar estomacal y náusea.
+                  {{producto.productoDescripcion}}
                 </p>
               </div>
               <div class="cant-agg">
@@ -114,44 +113,21 @@
             </div>
             <div class="instrucciones">
               <p class="subtitulos">Instrucciones:</p>
-              <p>Vía de administración oral. Mastíquese antes de tragar.</p>
+              <p>{{producto.productoInstrucciones}}.</p>
             </div>
             <div class="dosis">
               <p class="subtitulos">Dosis y modo de empleo:</p>
-              <ul>
-                <li>Adultos: 2 tabletas.</li>
-                <li>Niños de 9 a 12 años: 1 tableta.</li>
-                <li>Niños de 6 a 9 años: 2/3 de tableta.</li>
-              </ul>
               <p>
-                Repita dosis según requiera, máximo 8 dosis en 24 horas. Si
-                persisten las molestias por más de 2 días, consulte a su médico.
+                {{producto.productoDosis}}
               </p>
             </div>
             <div class="compuesto">
               <p class="subtitulos">Compuesto:</p>
-              <p class="a">Subsalicilato de Bismuto</p>
+              <p class="a">{{producto.productoCompuesto}}</p>
               <p class="subtitulos">Contenido:</p>
-              <p>Caja con 12 tabletas de concentración, 262.4 mg</p>
+              <p>{{producto.productoContenido}}</p>
             </div>
-            <div class="beneficios">
-              <p class="subtitulos">Beneficios:</p>
-              <ul>
-                <li>
-                  Acidez: calma la irritación con su acción protectora sin
-                  causar estreñimiento.
-                </li>
-                <li>Indigestión: proporciona alivio efectivo y seguro.</li>
-                <li>
-                  Malestar estomacal: alivia el malestar estomacal causado por
-                  sentirse pleno.
-                </li>
-                <li>
-                  Náusea: alivio efectivo de la náusea producto de indigestión.
-                </li>
-                <li>Diarrea: controla la diarrea en 4-24 horas.</li>
-              </ul>
-            </div>
+            
           </div>
         </div>
       </div>
