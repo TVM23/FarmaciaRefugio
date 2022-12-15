@@ -12,18 +12,18 @@ productoController.obtenerProductosTodos = async (req, res)=>
     res.render('productos', {productos});
 }
 
+productoController.search = async (req, res, next) => 
+{
+    const productosf =  await Producto.find({categoria: new RegExp(req.params.query, 'i')}).lean(); 
+   //res.json(productos);
+    res.render('productos', {productosf});
+}
+
+productoController.ofertas = async (req, res, next) => 
+{
+    const productosO =  await Producto.find({oferta: new RegExp(req.params.query, 'i')}).lean(); 
+   //res.json(productos);
+    res.render('productosof', {productosO});
+}
+
 export default productoController;
-
-
-
-/*     console.log('idCategoria', req.params.idCategoria); // Obtenemos el parametro de la cadena de consulta
-    let filtro;
-    const idCategoria = req.params.idCategoria;
-    // Verificar si tiene algo idCategoria
-
-    if ( isNaN(idCategoria) )
-        filtro= {};
-    else
-        filtro = { 'idCategoria.idCategoria': parseInt(idCategoria) };
-
-    console.log(filtro); */

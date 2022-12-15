@@ -14,6 +14,9 @@ const productoSchema = mongoose.Schema
     productoExtra:{
         type: String
     },
+    productoPreciod:{
+        type: Number
+    },
     productoPrecio:{
         type: Number
     },
@@ -38,6 +41,12 @@ const productoSchema = mongoose.Schema
     productoImagen:{
         type: String,
         trim: true
+    },
+    categoria:{
+        type: String
+    },
+    oferta:{
+        type: String
     },
 });
 
