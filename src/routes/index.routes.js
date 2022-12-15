@@ -16,7 +16,8 @@ const {
     renderDatos, 
     renderDatosTarjeta,
     renderNosotros,
-    renderMetodoPago} = indexController;
+    renderMetodoPago,
+    renderCarrito} = indexController;
 
 const router = express.Router();
 
@@ -33,6 +34,8 @@ router.get('/direccion-envio', isAuthenticated, renderDireccion)
 router.get('/pago/metodo', isAuthenticated, renderMetodoPago)
 
 router.get('/pago/detalles-tarjeta',isAuthenticated, renderTarjeta)
+
+router.get('/mi-carrito', renderCarrito);
 
 //router.get('/informacion-producto', renderProducto)
 
