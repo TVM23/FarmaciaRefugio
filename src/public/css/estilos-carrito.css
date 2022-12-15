@@ -276,6 +276,10 @@ img {
   cursor: pointer;
 }
 
+.seguir-comprando a{
+  text-decoration: none;
+}
+
 .continuar-compra {
   width: 24rem;
   height: 4rem;
@@ -287,6 +291,11 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.continuar-compra a{
+  text-decoration: none;
+  color: var(--blanco)
 }
 
 @media (max-width:1024px){ 

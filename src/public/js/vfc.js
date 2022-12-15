@@ -87,10 +87,12 @@ inputs.forEach((input)=>
 
 formulario.addEventListener('submit', (e)=> 
 {
-    e.preventDefault;
+    e.preventDefault();
     let texto = document.getElementById('txtMensaje').value;
     if(campos.nombre && campos.correo && campos.asunto && campos.telefono && texto!=='')
         formulario.submit();
-    else
+    else{
+        e.preventDefault();
         alert('Hay campos vacios o incorrectos.');
+    }
 });

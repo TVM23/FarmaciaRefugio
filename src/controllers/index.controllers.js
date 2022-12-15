@@ -28,7 +28,7 @@ indexController.ingresarDireccion = async (req, res)=>{
         const {localidadCliente, numeroContacto, estadoCliente, codigoPostalUsuario, municipioUsuario, coloniaUsuario, calleUsuario, numeroUsuario, indAdicionalesUsuario} = req.body
         await Usuario.findByIdAndUpdate(req.params.id, {localidadCliente, numeroContacto, estadoCliente, codigoPostalUsuario, municipioUsuario, coloniaUsuario, calleUsuario, numeroUsuario, indAdicionalesUsuario});  
         req.flash('direccion_agregada', 'Direccion de envio establecida');
-        res.redirect('/')
+        res.redirect('/pago/metodo')
     } catch (error) {
         console.log('Error',  error);
     }
@@ -70,8 +70,9 @@ indexController.renderProducto = (req, res)=>{
     // res.render('producto')
 }
 
-indexController.renderCarrito = (req, res)=>{
-    res.render('carrito');
+indexController.renderCarrito = async (req, res)=>{
+    const usuarioCarrito = await Usuario.findById(req.user.id).lean();
+    res.render('carrito', {usuarioCarrito});
 }
 
 /* indexController.renderDatos = (req, res)=>{
