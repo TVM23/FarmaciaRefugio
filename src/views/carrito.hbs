@@ -10,101 +10,104 @@
           <a href="#">Vaciar carrito</a>
         </div>
         <div class="seccion-productos">
-          <div class="producto">
-            <div class="imagen-datos">
-              <div class="imagen">
-                <img src="/img/medicamentos/pepto-bismol.webp" />
-              </div>
-              <div class="datos">
-                <div class="nombre">
-                  <p>Pepto-Bismol 24 Tabletas</p>
+          {{#each mi-carrito}}
+              <div class="producto">
+                <form action="/mi-carrito" method="post">
+                  <div class="imagen-datos">
+                    <div class="imagen">
+                      <img src="/img/medicamentos/antibioticos/{{prodcutoImagen}}" name="prodcutoImagen"/>
+                    </div>
+                    <div class="datos">
+                      <div class="nombre">
+                        <p name="productoNombre">{{productoNombre}}</p>
+                      </div>
+                      <div class="descripcion">
+                        <p name="prodcutoDescripción">
+                          {{productoDescripcion}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contenedor2">
+                    <div class="contador">
+                      <button
+                        class="menos"
+                        id="disabledBtn"
+                        onclick="addValueFunction(this)"
+                        value="decrease"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-minus"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="#ffffff"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </button>
+                      <div class="numero">
+                        <p id="cantidad" value="">0</p>
+                      </div>
+                      <button
+                        class="mas"
+                        onclick="addValueFunction(this)"
+                        value="increase"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-plus"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="#ffffff"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="precio-eliminar">
+                      <div class="eliminar">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-trash"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="#ffffff"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <line x1="4" y1="7" x2="20" y2="7" />
+                          <line x1="10" y1="11" x2="10" y2="17" />
+                          <line x1="14" y1="11" x2="14" y2="17" />
+                          <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                          <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                        </svg>
+                      </div>
+                      <div class="precio">
+                        <p name="productoPrecio">{{productoPrecio}}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="descripcion">
-                  <p>
-                    Medicamento para la tratar la diarrea, la acidez estomacal y
-                    mal estar en genral.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="contenedor2">
-              <div class="contador">
-                <button
-                  class="menos"
-                  id="disabledBtn"
-                  onclick="addValueFunction(this)"
-                  value="decrease"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-minus"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#ffffff"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </button>
-                <div class="numero">
-                  <p id="cantidad" value="">0</p>
-                </div>
-                <button
-                  class="mas"
-                  onclick="addValueFunction(this)"
-                  value="increase"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-plus"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#ffffff"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </button>
-              </div>
-              <div class="precio-eliminar">
-                <div class="eliminar">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-trash"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#ffffff"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="4" y1="7" x2="20" y2="7" />
-                    <line x1="10" y1="11" x2="10" y2="17" />
-                    <line x1="14" y1="11" x2="14" y2="17" />
-                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                  </svg>
-                </div>
-                <div class="precio">
-                  <p>$260.00</p>
-                </div>
-              </div>
-            </div>
-          </div>
+              </form>
+          {{/each}}
         </div>
         <div class="total">
           <!-- <h2>Total:   $280.00</h2> -->

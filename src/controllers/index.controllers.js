@@ -65,7 +65,11 @@ indexController.datosTarjeta = async (req, res)=>{
 }
 
 indexController.renderProducto = (req, res)=>{
-    res.render('producto')
+    // res.render('producto')
+}
+
+indexController.renderCarrito = (req, res)=>{
+    res.render('carrito');
 }
 
 /* indexController.renderDatos = (req, res)=>{

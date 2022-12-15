@@ -18,7 +18,8 @@ const {
     renderDatosTarjeta,
     datosTarjeta,
     renderNosotros,
-    renderMetodoPago} = indexController;
+    renderMetodoPago,
+    renderCarrito} = indexController;
 
 const router = express.Router();
 
@@ -40,7 +41,9 @@ router.get('/pago/detalles-tarjeta/:id',isAuthenticated, renderTarjeta)
 
 router.put('/pago/detalles-tarjeta/update/:id',isAuthenticated, datosTarjeta)
 
-router.get('/informacion-producto', renderProducto)
+router.get('/mi-carrito', renderCarrito);
+
+//router.get('/informacion-producto', renderProducto)
 
 //router.get('/detalles-usuario/informacion', renderDatos)
 
