@@ -76,9 +76,8 @@ app.get('/', (req, res) => {
 usuarioController.renderDatos = async (req, res)=>{
     /* const { correo } = req.body; */
     //Buscar el cliente
-    const usuario = await Usuario.findOne({emailUsuario: req.user.emailUsuario }).lean();
-    res.render('usuarios/datos', {usuario});
-    console.log(req.user.emailUsuario)
+    const usuarioDatos = await Usuario.findById(req.user.id).lean();
+    res.render('usuarios/datos', {usuarioDatos});
 
 }
 
@@ -90,9 +89,17 @@ usuarioController.renderDatosTarjeta = async (req, res)=>{
 //Editar tarjeta
 usuarioController.updateTarjeta = async (req, res)=>{
     const {titular, numeroTarjeta, mesExp, añoExp, CVV} = req.body;
-    await Usuario.findByIdAndUpdate(req.params.id, {titular, numeroTarjeta, mesExp, añoExp, CVV})
+    /* await Usuario.findByIdAndUpdate(req.params.id, {titular, numeroTarjeta, mesExp, añoExp, CVV})
+    req.flash('success_msg', 'Informacion de tarjeta agregada')
+    res.redirect('/detalles-usuario/tarjeta') */
+
+    const usuario = new Usuario({titular, numeroTarjeta, mesExp, añoExp, CVV});
+    usuario.numeroTarjeta = await usuario.encryptCardNumber(numeroTarjeta)
+    usuario.CVV = await usuario.encryptCVV(CVV)
+    await Usuario.findByIdAndUpdate(req.params.id, {usuario})
     req.flash('success_msg', 'Informacion de tarjeta agregada')
     res.redirect('/detalles-usuario/tarjeta')
+
 }
 
 //Eliminar usuario

@@ -34,8 +34,24 @@ indexController.ingresarDireccion = async (req, res)=>{
     }
 }
 
-indexController.renderMetodoPago = (req, res)=>{
-    res.render('pago/metodo')
+indexController.renderMetodoPago = async (req, res)=>{
+    const usuarioMetodo = await Usuario.findById(req.user.id).lean();
+    res.render('pago/metodo', {usuarioMetodo})
+    
+}
+
+indexController.getMetodoPago = async (req, res)=>{
+    try {
+        const usuarioMetodoGet = await Usuario.findById(req.user.id).lean();
+        const {metodoPago} = req.body
+        await Usuario.findByIdAndUpdate(req.user.id, {metodoPago});  
+        res.redirect('/pago/detalles-tarjeta/:id', {usuarioMetodoGet});
+
+        /* miUsuario = await Usuario.updateOne({_id: Object(idD)}, {$set: {'titular': titular}}); */
+        /* res.send(miUsuario); */
+    } catch (error) {
+        console.log('Error',  error);
+    }
     
 }
 
@@ -55,7 +71,7 @@ indexController.datosTarjeta = async (req, res)=>{
         const {titular, numeroTarjeta, mesExp, añoExp, CVV} = req.body
         await Usuario.findByIdAndUpdate(req.params.id, {titular, numeroTarjeta, mesExp, añoExp, CVV});  
 
-        req.flash('success_msg', 'Tarjeta obtenida con exito');
+        req.flash('success_msg', 'Compra finalizada con exito');
         res.redirect('/');
 
         /* miUsuario = await Usuario.updateOne({_id: Object(idD)}, {$set: {'titular': titular}}); */

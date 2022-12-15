@@ -112,7 +112,25 @@ usuarioSchema.methods.encryptPassword =  async passwordUsuario => {
 
 usuarioSchema.methods.matchPassword = async function(passwordUsuario) {
     return await bcrypt.compare(passwordUsuario, this.passwordUsuario)
-}
+};
+
+usuarioSchema.methods.encryptCardNumber =  async numeroTarjeta => {
+    const salt = await bcrypt.genSalt(10);
+    return await bcrypt.hash(numeroTarjeta, salt);
+};
+
+usuarioSchema.methods.matchCardNumber = async function(numeroTarjeta) {
+    return await bcrypt.compare(numeroTarjeta, this.passwordUsuario)
+};
+
+usuarioSchema.methods.encryptCVV =  async CVV => {
+    const salt = await bcrypt.genSalt(10);
+    return await bcrypt.hash(CVV, salt);
+};
+
+usuarioSchema.methods.matchCVV = async function(CVV) {
+    return await bcrypt.compare(CVV, this.passwordUsuario)
+};
 
 const Usuario = mongoose.model('Usuario', usuarioSchema);
 export default Usuario;

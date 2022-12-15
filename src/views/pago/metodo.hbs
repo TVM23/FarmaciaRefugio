@@ -4,36 +4,41 @@
 </head>
 <body>
     <section class="contenedor sombra">
-        <div class="encabezado">
-            <p>Elegir método de pago</p> 
-        </div>
-        <hr>
-        <div class="contenedor-forma">
-            <div class="in">
-                <div class="imagen">
-                    <img src="/img/tarjetas-credito-icono-tarjeta-credito-o-debito-vector-vistas-frontal-trasera-sistema-o-tecnologia-pago-contacto-maquetas-vector-tarjeta-credito-pagando-o-comprando_435184-640.webp" alt="">
-                    <p>Tarjeta de débito/crédito</p>
+        {{!-- <form class="formulario" action="/pago/metodo/update/{{usuarioMetodo._id}}?_method=PUT" method="POST">
+            <input type="hidden" name="_method" value="PUT"> --}}
+            <div class="encabezado">
+                <p>Elegir método de pago</p> 
+            </div>
+            <hr>
+            <div class="contenedor-forma">
+                <div class="in">
+                    <div class="imagen">
+                        <img src="/img/tarjetas-credito-icono-tarjeta-credito-o-debito-vector-vistas-frontal-trasera-sistema-o-tecnologia-pago-contacto-maquetas-vector-tarjeta-credito-pagando-o-comprando_435184-640.webp" alt="">
+                        <p>Tarjeta de débito/crédito</p>
+                    </div>
+                </div>
+                <div class="check">
+                    <input class="chk opcion" type="checkbox" id="tarjeta" name="metodoPago">
                 </div>
             </div>
-            <div class="check">
-                <input class="chk opcion" type="checkbox" id="tarjeta" name="banco">
-            </div>
-        </div>
-        <div class="contenedor-forma">
-            <div class="in">
-                <div class="imagen">
-                    <img src="/img/dinero.2.jpg" alt="">
-                    <p>Efectivo a través de OXXO</p>
+            <div class="contenedor-forma">
+                <div class="in">
+                    <div class="imagen">
+                        <img src="/img/dinero.2.jpg" alt="">
+                        <p>Efectivo a través de OXXO</p>
+                    </div>
+                </div>
+                <div class="check">
+                    <input class="chk opcion" type="checkbox" id="efectivo" name="metodoPago2">
                 </div>
             </div>
-            <div class="check">
-                <input class="chk opcion" type="checkbox" id="efectivo" name="oxxo">
+            <div class="botones">
+            {{!-- <input type="submit" class="boton-regresar" value="Regresar"> --}}
+            <a href="/direccion-envio/{{usuarioMetodo._id}}" class="boton-regresar">Regresar</a>
+            {{!-- <input type="submit" class="boton-confirmar" formaction="" value="Confirmar método"> --}}
+            <a href="/pago/detalles-tarjeta/{{usuarioMetodo._id}}" class="boton-confirmar">Confirmar metodo</a>
             </div>
-        </div>
-        <div class="botones">
-          <input type="submit" class="boton-regresar" value="Regresar">
-          <input type="submit" class="boton-confirmar" formaction="" value="Confirmar método">
-        </div>
+        {{!-- </form> --}}
     </section>
 </body>
 <script src="/js/mh.js"></script>

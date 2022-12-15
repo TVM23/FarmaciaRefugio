@@ -8,103 +8,103 @@ const expresiones = {
 };
 
 const campos = {
-  loc: false,
-  est: false,
-  cp: false,
-  numc: false,
-  mun: false,
-  col: false,
-  call: false,
-  num: false,
+  localidadCliente: false,
+  estadoCliente: false,
+  codigoPostalUsuario: false,
+  numeroContacto: false,
+  municipioUsuario: false,
+  coloniaUsuario: false,
+  calleUsuario: false,
+  numeroUsuario: false,
 };
 
 const validarFormulario = (e) => {
   switch (e.target.name) {
-    case "loc":
+    case "localidadCliente":
       if (expresiones.letesp.test(e.target.value)) {
         document.getElementById("cloc").classList.remove("incorrecto");
         document.getElementById("cloc").classList.add("correcto");
-        campos["loc"] = true;
+        campos["localidadCliente"] = true;
       } else {
         document.getElementById("cloc").classList.remove("correcto");
         document.getElementById("cloc").classList.add("incorrecto");
-        campos["loc"] = false;
+        campos["localidadCliente"] = false;
       }
       break;
-    case "est":
+    case "estadoCliente":
       if (expresiones.letesp.test(e.target.value)) {
         document.getElementById("cest").classList.remove("incorrecto");
         document.getElementById("cest").classList.add("correcto");
-        campos["est"] = true;
+        campos["estadoCliente"] = true;
       } else {
         document.getElementById("cest").classList.remove("correcto");
         document.getElementById("cest").classList.add("incorrecto");
-        campos["est"] = false;
+        campos["estadoCliente"] = false;
       }
       break;
-    case "cp":
+    case "codigoPostalUsuario":
       if (expresiones.cp.test(e.target.value)) {
         document.getElementById("ccp").classList.remove("incorrecto");
         document.getElementById("ccp").classList.add("correcto");
-        campos["cp"] = true;
+        campos["codigoPostalUsuario"] = true;
       } else {
         document.getElementById("ccp").classList.remove("correcto");
         document.getElementById("ccp").classList.add("incorrecto");
-        campos["cp"] = false;
+        campos["codigoPostalUsuario"] = false;
       }
       break;
-    case "numc":
+    case "numeroContacto":
       if (expresiones.telefono.test(e.target.value)) {
         document.getElementById("cnumc").classList.remove("incorrecto");
         document.getElementById("cnumc").classList.add("correcto");
-        campos["numc"] = true;
+        campos["numeroContacto"] = true;
       } else {
         document.getElementById("cnumc").classList.remove("correcto");
         document.getElementById("cnumc").classList.add("incorrecto");
-        campos["numc"] = false;
+        campos["numeroContacto"] = false;
       }
-    case "mun":
+    case "municipioUsuario":
       if (expresiones.letesp.test(e.target.value)) {
         document.getElementById("cmun").classList.remove("incorrecto");
         document.getElementById("cmun").classList.add("correcto");
-        campos["mun"] = true;
+        campos["municipioUsuario"] = true;
       } else {
         document.getElementById("cmun").classList.remove("correcto");
         document.getElementById("cmun").classList.add("incorrecto");
-        campos["mun"] = false;
+        campos["municipioUsuario"] = false;
       }
       break;
-    case "col":
+    case "coloniaUsuario":
       if (expresiones.letesp.test(e.target.value)) {
         document.getElementById("ccol").classList.remove("incorrecto");
         document.getElementById("ccol").classList.add("correcto");
-        campos["col"] = true;
+        campos["coloniaUsuario"] = true;
       } else {
         document.getElementById("ccol").classList.remove("correcto");
         document.getElementById("ccol").classList.add("incorrecto");
-        campos["col"] = false;
+        campos["coloniaUsuario"] = false;
       }
       break;
-    case "call":
+    case "calleUsuario":
       if (expresiones.letesp.test(e.target.value)) {
         document.getElementById("ccall").classList.remove("incorrecto");
         document.getElementById("ccall").classList.add("correcto");
-        campos["call"] = true;
+        campos["calleUsuario"] = true;
       } else {
         document.getElementById("ccall").classList.remove("correcto");
         document.getElementById("ccall").classList.add("incorrecto");
-        campos["call"] = false;
+        campos["calleUsuario"] = false;
       }
       break;
-    case "num":
+    case "numeroUsuario":
       if (expresiones.num.test(e.target.value)) {
         document.getElementById("cnum").classList.remove("incorrecto");
         document.getElementById("cnum").classList.add("correcto");
-        campos["num"] = true;
+        campos["numeroUsuario"] = true;
       } else {
         document.getElementById("cnum").classList.remove("correcto");
         document.getElementById("cnum").classList.add("incorrecto");
-        campos["num"] = false;
+        campos["numeroUsuario"] = false;
       }
       break;
   }
@@ -118,17 +118,15 @@ inputs.forEach((input) => {
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   if (
-    campos.loc &&
-    campos.est &&
-    campos.cp &&
-    campos.numc &&
-    campos.loc &&
-    campos.mun &&
-    campos.col &&
-    campos.call &&
-    campos.num
+    campos.localidadCliente &&
+    campos.estadoCliente &&
+    campos.codigoPostalUsuario &&
+    campos.numeroContacto &&
+    campos.municipioUsuario &&
+    campos.coloniaUsuario &&
+    campos.calleUsuario &&
+    campos.numeroUsuario
   ) {
-    /* formulario.reset(); */
     formulario.submit();
   } else alert("Hay campos vacios o incorrectos.");
 });
