@@ -6,7 +6,8 @@ const
 {
     obtenerProductosTodos,
     search,
-    ofertas
+    ofertas,
+    obtenerProducto
 } = productoController;
 
 // Filtrado
@@ -16,5 +17,8 @@ router.get('/productos', obtenerProductosTodos ); // /:idCategoria Indicamos que
 router.get('/productos/:query', search );
 
 router.get('/productos/o/:query', ofertas );
+
+router.get('/informacion-producto/:id', obtenerProducto);
+
 
 export default router;
