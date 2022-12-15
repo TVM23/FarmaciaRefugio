@@ -4,45 +4,45 @@
 </head>
 <body>
     <section class="contenedor sombra">
-        <form class="formulario">
+        <form class="formulario" action="/direccion-envio/update/{{usuarioD._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
               <p>Dirección de envío</p> 
-              <hr>
               <div class="campos">
                   <div class="campo" id="cloc">
                       <label for="txtLocalidad">*Localidad</label>
-                      <input class="input-campos" type="text" name="loc" id="txtLocalidad" placeholder="Ingrese su localidad">
+                      <input class="input-campos" type="text" name="localidadCliente" id="txtLocalidad" placeholder="Ingrese su localidad">
                   </div>
                   <div class="campo" id="cest">
                       <label for="txtEstado">*Estado</label>
-                      <input class="input-campos" type="text" name="est" id="txtEstado" placeholder="Ingrese su estado">
+                      <input class="input-campos" type="text" name="estadoCliente" id="txtEstado" placeholder="Ingrese su estado">
                   </div>
                   <div class="campo" id="ccp">
                       <label for="txtCP">*Código Postal</label>
-                      <input class="input-campos" type="text" name="cp" id="txtCP" placeholder="Ingrese su CP">
+                      <input class="input-campos" type="text" name="codigoPostalUsuario" id="txtCP" placeholder="Ingrese su CP">
                   </div>
                   <div class="campo" id="cnumc">
                       <label for="txtNumc">*Número de contacto</label>
-                      <input class="input-campos" type="text" name="numc" id="txtNumc" placeholder="Ingrese su número celular">
+                      <input class="input-campos" type="text" name="numeroContacto" id="txtNumc" placeholder="Ingrese su número celular">
                   </div>
                   <div class="campo" id="cmun">
                       <label for="txtMunicipio">*Municipio</label>
-                      <input class="input-campos" type="text" name="mun" id="txtMunicipio" placeholder="Ingrese su municipio">
+                      <input class="input-campos" type="text" name="municipioUsuario" id="txtMunicipio" placeholder="Ingrese su municipio">
                   </div>
                   <div class="campo" id="ccol">
                       <label for="txtColonia">*Colonia</label>
-                      <input class="input-campos" type="text" name="col" id="txtColonia" placeholder="Ingrese su colonia">
+                      <input class="input-campos" type="text" name="coloniaUsuario" id="txtColonia" placeholder="Ingrese su colonia">
                   </div>
                   <div class="campo" id="ccall">
                       <label for="txtCalle">*Calle</label>
-                      <input class="input-campos" type="text" name="call" id="txtCalle" placeholder="Ingrese su calle">
+                      <input class="input-campos" type="text" name="calleUsuario" id="txtCalle" placeholder="Ingrese su calle">
                   </div>
                   <div class="campo" id="cnum">
                       <label for="txtNum">*Número</label>
-                      <input class="input-campos" type="text" name="num" id="txtNum" placeholder="Ingrese su número">
+                      <input class="input-campos" type="text" name="numeroUsuario" id="txtNum" placeholder="Ingrese su número">
                   </div>
                   <div class="campo" id="cind">
                       <label for="txtIndicaciones">Indicaciones adicionales</label>
-                      <textarea class="input-campos" name="ind" id="txtIndicaciones"></textarea>
+                      <textarea class="input-campos" name="indAdicionalesUsuario" id="txtIndicaciones"></textarea>
                   </div>
               </div>
               <div class="botones">

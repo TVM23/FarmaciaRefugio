@@ -2,7 +2,6 @@ import passport from "passport";
 import localStrategy from "passport-local";
 import Usuario from '../models/Usuario.js';
 
-
 passport.use(new localStrategy.Strategy({
     usernameField: 'emailUsuario',
     passwordField: 'passwordUsuario',

@@ -128,7 +128,7 @@ formulario.addEventListener("submit", (e) => {
     campos.call &&
     campos.num
   ) {
-    formulario.reset();
-    e.currentTarget.submit();
+    /* formulario.reset(); */
+    formulario.submit();
   } else alert("Hay campos vacios o incorrectos.");
 });

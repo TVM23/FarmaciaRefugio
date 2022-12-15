@@ -38,14 +38,14 @@ router.get('/logout', isAuthenticated, logout)
 
 router.get('/detalles-usuario/informacion', isAuthenticated, renderDatos)
 
-router.get('/detalles-usuario/tarjeta', isAuthenticated, renderDatosTarjeta)
+/* router.get('/detalles-usuario/tarjeta', isAuthenticated, renderDatosTarjeta) */
 
 //Editar info usuario
 //Editar tarjeta
-router.put('/detalles-usuario/tarjeta/edit/:id', isAuthenticated, updateTarjeta)
+/* router.put('/detalles-usuario/tarjeta/edit/:id', isAuthenticated, updateTarjeta) */
 
 
 //Eliminiar usuario
-router.delete('/detalles-usuario/informacion/delete/:id', isAuthenticated, deleteUsuario)
+/* router.delete('/detalles-usuario/informacion/delete/:id', isAuthenticated, deleteUsuario) */
 
 export default router;

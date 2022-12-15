@@ -157,6 +157,8 @@ h1, h2, h3{
     margin-right: auto;
 }
 
+
+
 .año select{
     width: 10rem;
     height: 4rem;
@@ -264,15 +266,59 @@ h1, h2, h3{
     width: 70%;
 }
 
-.login input:hover{
+.ingresar button{
+    border-radius: 20rem;
+    height: 3.4rem;
+    width: 70%;
+}
+
+
+.login button:hover{
     background-color: var(--primario-oscuro);
 }
 
-.login input{
+.login button{
     border: none;
     color: var(--blanco);
     background-color: var(--primario);
     cursor: pointer;
+}
+
+.ingresar a{
+    border-radius: 20rem;
+    height: 3.4rem;
+    width: 70%;
+}
+
+.ingresar button{
+    border-radius: 20rem;
+    height: 3.4rem;
+    width: 70%;
+}
+
+.login button:hover{
+    background-color: var(--primario-oscuro);
+}
+
+.login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.login button{
+    cursor: pointer;
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20rem;
+
+    text-decoration: none;
+
+    width: 20rem;
 }
 
 .boton{

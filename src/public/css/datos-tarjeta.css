@@ -162,7 +162,7 @@ h1, h2, h3{
     align-items: flex-end;
 }
 
-.confirmar input{
+.confirmar a{
     cursor: pointer;
     background-color: var(--primario);
     color: var(--blanco);
@@ -381,7 +381,6 @@ h1, h2, h3{
     display: block;
     width: 48%;
 }
-
 .cad{
     display: flex;
     width: 100%;

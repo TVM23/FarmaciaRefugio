@@ -76,13 +76,14 @@ app.get('/', (req, res) => {
 usuarioController.renderDatos = async (req, res)=>{
     /* const { correo } = req.body; */
     //Buscar el cliente
-    /* const usuario = await Usuario.findOne({emailUsuario: correo }); */
-    res.render('usuarios/datos', /* {usuario} */);
+    const usuario = await Usuario.findOne({emailUsuario: req.user.emailUsuario }).lean();
+    res.render('usuarios/datos', {usuario});
+    console.log(req.user.emailUsuario)
+
 }
 
 usuarioController.renderDatosTarjeta = async (req, res)=>{
-    const usuario = await Usuario.findById(req.params.id)
-    res.render('usuarios/datos-tarjeta', {usuario});
+    res.render('usuarios/datos-tarjeta')
 }
 
 //Editar datos usuario
@@ -95,11 +96,11 @@ usuarioController.updateTarjeta = async (req, res)=>{
 }
 
 //Eliminar usuario
-usuarioController.deleteUsuario = async (req, res)=>{
+/* usuarioController.deleteUsuario = async (req, res)=>{
     await Usuario.findByIdAndDelete(req.params.id);
     req.flash('success_msg', 'Usuario eliminado')
     res.redirect('/');
-}
+} */
 
 
 

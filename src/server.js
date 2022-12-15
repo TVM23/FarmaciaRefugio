@@ -2,6 +2,8 @@ import express from 'express'
 import dotenv from "dotenv";
 import conectarDB from "./database.js";
 import exphbs from 'express-handlebars';
+import Handlebars from 'handlebars';
+import allowInsecurePrototypeAccess from '@handlebars/allow-prototype-access'
 import path from 'path'
 import {fileURLToPath} from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -24,7 +26,7 @@ conectarDB();
 import './config/passport.js';
 
 //Setting
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 4000)
 app.set('views', path.join(__dirname, 'views'))
 app.engine('.hbs', exphbs.engine({
     defaultLayout: 'main',
@@ -52,6 +54,7 @@ app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.cuenta_repetida = req.flash('cuenta_repetida')
     res.locals.error = req.flash('error')
+    res.locals.cerrar_sesion = req.flash('cerrar_sesion')
     res.locals.user = req.user || null;
     next();
 })

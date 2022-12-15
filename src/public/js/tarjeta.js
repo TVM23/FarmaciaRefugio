@@ -13,6 +13,7 @@ formulario.addEventListener('submit', e => {
     resetColor();
 	checkInputs();
     if(ban==true){
+        formulario.submit();
         /* window.location = '/index.html' */
     }
 })

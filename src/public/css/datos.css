@@ -59,7 +59,8 @@ h1, h2, h3{
   }
   
   .contenedor-form{
-      display: block;
+      /* display: block; */
+      display: none;
       justify-content: center;
       align-items: center;
       /* width: 35rem;  */

@@ -15,7 +15,7 @@
                       <p>Nombre del usuario</p>
                   </div>
                   <div class="placeholder">
-                      <p class="nom">{{nombreUsuario}}{{apellidosUsuario}}</p>
+                      <p class="nom">{{user.emailUsuario}}</p>
                   </div>
               </div>
               <div class="id esp">
@@ -23,7 +23,7 @@
                       <p>Id del usuario</p>
                   </div>
                   <div class="placeholder">
-                      <p class="nom">{{_id}}</p>
+                      {{!-- <p class="nom">{{_id}}</p> --}}
                   </div>
               </div>
               <div class="opciones">
@@ -41,7 +41,7 @@
                   <a href="/detalles-usuario/tarjeta" class="btn-crear">Informacion de tarjeta</a>
                 </div>
               </div>
-              <form action="/detalles-usuario/tarjeta/delete/{{_id}}?_method=DELETE" method="POST">
+              <form action="{{!-- /detalles-usuario/informacion/delete/{{user._id}}?_method=DELETE --}}" method="POST">
               <input type="hidden" name="_method" value="DELETE">
                 <div class="eliminar">
                   <input type="submit" class="cerrar"  value="Eliminar Cuenta">

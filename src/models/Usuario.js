@@ -32,6 +32,11 @@ const usuarioSchema = mongoose.Schema({
         type: String,
         trim: true
     },
+    numeroContacto:{
+        type: Number,
+        default: null,
+        trim: true
+    },
     estadoCliente:{
         type: String,
         trim: true

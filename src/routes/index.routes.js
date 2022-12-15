@@ -11,10 +11,12 @@ const {
     renderOlvidarContra, 
     renderContacto, 
     renderDireccion, 
+    ingresarDireccion,
     renderTarjeta, 
     renderProducto, 
     renderDatos, 
     renderDatosTarjeta,
+    datosTarjeta,
     renderNosotros,
     renderMetodoPago} = indexController;
 
@@ -28,11 +30,15 @@ router.get('/contacto', renderContacto)
 
 router.get('/nosotros', renderNosotros)
 
-router.get('/direccion-envio', isAuthenticated, renderDireccion)
+router.get('/direccion-envio/:id', isAuthenticated, renderDireccion)
+
+router.put('/direccion-envio/update/:id', isAuthenticated, ingresarDireccion)
 
 router.get('/pago/metodo', isAuthenticated, renderMetodoPago)
 
-router.get('/pago/detalles-tarjeta',isAuthenticated, renderTarjeta)
+router.get('/pago/detalles-tarjeta/:id',isAuthenticated, renderTarjeta)
+
+router.put('/pago/detalles-tarjeta/update/:id',isAuthenticated, datosTarjeta)
 
 router.get('/informacion-producto', renderProducto)
 
