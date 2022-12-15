@@ -39,6 +39,10 @@ const productoSchema = mongoose.Schema
         type: String,
         trim: true
     },
+    productoCarrito:{
+        type: Boolean,
+        dafault: false
+    }
 });
 
 const Producto = mongoose.model('Producto', productoSchema);
