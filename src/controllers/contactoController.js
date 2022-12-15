@@ -8,7 +8,7 @@ contactoController.nuevo = async (req, res) =>
         const newcontacto = new Contacto({nombre:nombre, correo:correo, asunto:asunto, numero:numero, mensaje:mensaje});
         console.log(newcontacto);
         await newcontacto.save();  
-        res.json("Se inserto el contacto");
+        res.redirect("/");
 }
 
 export default contactoController;
