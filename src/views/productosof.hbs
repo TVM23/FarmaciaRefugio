@@ -1,4 +1,3 @@
-
 <head>
     <title>Productos</title>
     <link rel="preload" href="/css/estilosprod.css" as="style" />
@@ -9,7 +8,7 @@
         <div class="laterald">
           <div class="productos " id="lista-productos">
             <!-- Inicio de producto -->
-            {{#each productosf}}
+            {{#each productosO}}
                 <div class="contenedor-producto">
                     <div class="imagen">
                       <img src="/img/medicamentos/antibioticos/{{productoImagen}}"/>
@@ -17,6 +16,7 @@
                     <div class="info">
                       <p class="texto nombre">{{productoNombre}}</p>
                       <p class="texto extra">{{productoExtra}}</p>
+                      <p class="preciod">${{productoPreciod}}.00</p>
                       <p class="precio">${{productoPrecio}}.00</p>
                       <a href="#" class="boton">Agregar al carrito</a>
                     </div>

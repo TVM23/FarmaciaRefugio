@@ -41,7 +41,7 @@ router.get('/pago/detalles-tarjeta/:id',isAuthenticated, renderTarjeta)
 
 router.put('/pago/detalles-tarjeta/update/:id',isAuthenticated, datosTarjeta)
 
-router.get('/mi-carrito', renderCarrito);
+router.get('/mi-carrito',isAuthenticated, renderCarrito);
 
 //router.get('/informacion-producto', renderProducto)
 

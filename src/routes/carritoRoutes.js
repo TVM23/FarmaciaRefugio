@@ -1,6 +1,9 @@
 import express from 'express';
 import carritoController from '../controllers/carritoController';
 const router = express.Router();
+import helpers from '../helpers/auth.js';
+
+const {isAuthenticated} = helpers;
 
 const 
 {
@@ -12,9 +15,9 @@ const
 
 // Filtrado
 
-router.get('/mi-carrito', obtenerProductoCarrito );
-router.post('/mi-carrito', anadirProductoCarrito );
-router.put('/mi-carrito/:id', actualizarProductoCarrito);
-router.delete('/mi-carrito/:id', eliminarProductoCarrito);
+router.get('/mi-carrito', isAuthenticated, obtenerProductoCarrito );
+router.post('/mi-carrito', isAuthenticated, anadirProductoCarrito );
+router.put('/mi-carrito/:id', isAuthenticated, actualizarProductoCarrito);
+router.delete('/mi-carrito/:id', isAuthenticated, eliminarProductoCarrito);
 
 export default router;

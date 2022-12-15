@@ -44,6 +44,8 @@ indexController.renderTarjeta = async (req, res)=>{
     const usuario3 = await Usuario.findById(req.params.id).lean();
     console.log(usuario3)
     console.log(usuario3._id)
+    console.log(req.user.id)
+    console.log(req.params.id)
     res.render('pago/tarjeta', {usuario3})
 }
 

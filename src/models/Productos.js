@@ -14,6 +14,9 @@ const productoSchema = mongoose.Schema
     productoExtra:{
         type: String
     },
+    productoPreciod:{
+        type: Number
+    },
     productoPrecio:{
         type: Number
     },
@@ -39,10 +42,12 @@ const productoSchema = mongoose.Schema
         type: String,
         trim: true
     },
-    productoCarrito:{
-        type: Boolean,
-        dafault: false
-    }
+    categoria:{
+        type: String
+    },
+    oferta:{
+        type: String
+    },
 });
 
 const Producto = mongoose.model('Producto', productoSchema);

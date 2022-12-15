@@ -20,7 +20,7 @@ const validarFormulario = (e)=>
 {
     switch (e.target.name)
     {
-        case "nom":
+        case "nombre":
             if(expresiones.nombre.test(e.target.value))
             {
                 document.getElementById('cnom').classList.remove('incorrecto');  
@@ -34,7 +34,7 @@ const validarFormulario = (e)=>
                 campos['nombre']=false;
             }
         break;
-        case "cor":
+        case "correo":
             if(expresiones.correo.test(e.target.value))
             {
                 document.getElementById('ccor').classList.remove('incorrecto');  
@@ -48,7 +48,7 @@ const validarFormulario = (e)=>
                 campos['correo']=false;
             }
         break;
-        case "asu":
+        case "asunto":
             if(expresiones.asunto.test(e.target.value))
             {
                 document.getElementById('casu').classList.remove('incorrecto');  
@@ -62,7 +62,7 @@ const validarFormulario = (e)=>
                 campos['asunto']=false;
             }
         break;
-        case "tel":
+        case "numero":
             if(expresiones.telefono.test(e.target.value))
             {
                 document.getElementById('ctel').classList.remove('incorrecto');  
@@ -90,7 +90,7 @@ formulario.addEventListener('submit', (e)=>
     e.preventDefault;
     let texto = document.getElementById('txtMensaje').value;
     if(campos.nombre && campos.correo && campos.asunto && campos.telefono && texto!=='')
-        formulario.reset();
+        formulario.submit();
     else
         alert('Hay campos vacios o incorrectos.');
 });

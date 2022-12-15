@@ -23,6 +23,7 @@
           <div class="iconos">
             <div class="usuario">
               <div class="icono">
+                <!-- <a href="/html/inicio-sesion.html"> -->
                 {{#if user}}
                 <a href="/detalles-usuario/informacion">
                 {{else}}
@@ -39,7 +40,7 @@
             <div class="carrito">
               <div class="icono">
                 {{#if user}}
-                <a href="/mi-carrito">
+                <a href="/">
                 {{else}}
                 <a href="#" id="refcarro">
                   <script>
@@ -107,48 +108,47 @@
                       </div>
                     </a>
                     <ul class="menu_nesting-inside">
-                      <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Antibioticos</a></li>
-                      <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Digestivo</a></li>
-                      <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Respiratorio</a></li>
-                      <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Dolor</a></li>
+                      <li class="menu_inside-2"><a href="/productos/Antibioticos" class="menu_link menu_link-inside menu-link-inside-2">Antibioticos</a></li>
+                      <li class="menu_inside-2"><a href="/productos/Anti-Inflamatorio" class="menu_link menu_link-inside menu-link-inside-2">Anti-Inflamatorio</a></li>
+                      <li class="menu_inside-2"><a href="/productos/Gripe" class="menu_link menu_link-inside menu-link-inside-2">Gripe y Tos</a></li>
                     </ul>
                   </li>
                   <li class="menu_inside menu-item-show">
-                    <a href="#" class="menu_link menu_link-inside">Nutricion
+                    <a href="/productos/Nutricion" class="menu_link menu_link-inside">Nutricion
                       <div class="expandir-icono">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        {{!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                          <polyline points="9 6 15 12 9 18" />
-                        </svg>
+                          <polyline points="9 6 15 12 9 18" /> 
+                        </svg>--}}
                       </div>
                     </a>
-                    <ul class="menu_nesting-inside">
+{{!--                     <ul class="menu_nesting-inside">
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Vitaminas</a></li>
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Suplementos</a></li>
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Complementos</a></li>
-                    </ul>
+                    </ul> --}}
                   </li>
-                  <li class="menu_inside"><a href="#" class="menu_link menu_link-inside">Mat. Quirurgico</a></li>
+                  {{!-- <li class="menu_inside"><a href="/productos/MaterialQuirurgico" class="menu_link menu_link-inside">Mat. Quirurgico</a></li> --}}
                   <li class="menu_inside menu-item-show">
-                    <a href="#" class="menu_link menu_link-inside">Dermatologia
+                    <a href="/productos/Dermatologia" class="menu_link menu_link-inside">Dermatologia
                       <div class="expandir-icono">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        {{!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                           <polyline points="9 6 15 12 9 18" />
-                        </svg>
+                        </svg> --}}
                       </div>
                     </a>
-                    <ul class="menu_nesting-inside">
+                    {{!-- <ul class="menu_nesting-inside">
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Capilar</a></li>
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Corporal</a></li>
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Facial</a></li>
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">NutriCosmeticos</a></li>
                       <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Proteccion Solar</a></li>
-                    </ul>
+                    </ul> --}}
                   </li>
-                  <li class="menu_inside"><a href="#" class="menu_link menu_link-inside">Cuidado Personal</a></li>
-                  <li class="menu_inside"><a href="#" cclass="menu_link menu_link-inside">Higiene Bucal</a></li>
-                  <li class="menu_inside"><a href="#" class="menu_link menu_link-inside">Ofertas</a></li>
+                  <li class="menu_inside"><a href="/productos/CuidadoPersonal" class="menu_link menu_link-inside">Cuidado Personal</a></li>
+                  {{!-- <li class="menu_inside"><a href="/productos/HigieneBucal" cclass="menu_link menu_link-inside">Higiene Bucal</a></li> --}}
+                  <li class="menu_inside"><a href="/productos/o/oferta" class="menu_link menu_link-inside">Ofertas</a></li>
                 </ul>
               </li>
               <!-- <li><a href="#">Ofertas</a></li> -->
@@ -184,54 +184,68 @@
                         </div>
                       </a>
                       <ul class="menu_nesting-">
-                        <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Antibioticos</a></li>
-                        <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Digestivo</a></li>
-                        <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Respiratorio</a></li>
-                        <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Dolor</a></li>
+                        <li class="menu_inside-2"><a href="/productos/Antibioticos" class="menu_link menu_link-inside menu-link-inside-2">Antibioticos</a></li>
+                        <li class="menu_inside-2"><a href="/productos/Anti-Inflamatorio" class="menu_link menu_link-inside menu-link-inside-2">Anti-Inflamatorio</a></li>
+                        <li class="menu_inside-2"><a href="/productos/Gripe" class="menu_link menu_link-inside menu-link-inside-2">Gripe y tos</a></li>
                       </ul>
                     </li>
                     <li class="menu_inside menu-item-show-2">
-                      <a href="#" class="menu_link menu_link-inside">Nutricion
+                      <a href="/productos/Nutricion" class="menu_link menu_link-inside">Nutricion
                         <div class="expandir-icono">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          {{!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <polyline points="9 6 15 12 9 18" />
-                          </svg>
+                            <polyline points="9 6 15 12 9 18" /> 
+                          </svg>--}}
                         </div>
                       </a>
-                      <ul class="menu_nesting-">
+                     {{!--  <ul class="menu_nesting-">
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Vitaminas</a></li>
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Suplementos</a></li>
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Complementos</a></li>
-                      </ul>
+                      </ul> --}}
                     </li>
-                    <li class="menu_inside"><a href="#" class="menu_link menu_link-inside">Mat. Quirurgico</a></li>
+                    {{!-- <li class="menu_inside"><a href="/productos/MaterialQuirurgico" class="menu_link menu_link-inside">Mat. Quirurgico</a></li> --}}
                     <li class="menu_inside menu-item-show-2">
-                      <a href="#" class="menu_link menu_link-inside">Dermatologia
+                      <a href="/productos/Dermatologia" class="menu_link menu_link-inside">Dermatologia
                         <div class="expandir-icono">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          {{!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="#6774F1" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <polyline points="9 6 15 12 9 18" />
-                          </svg>
+                          </svg> --}}
                         </div>
                       </a>
-                      <ul class="menu_nesting-">
+                      {{!-- <ul class="menu_nesting-">
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Capilar</a></li>
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Corporal</a></li>
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Facial</a></li>
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">NutriCosmeticos</a></li>
                         <li class="menu_inside-2"><a href="#" class="menu_link menu_link-inside menu-link-inside-2">Proteccion Solar</a></li>
-                      </ul>
+                      </ul> --}}
                     </li>
-                    <li class="menu_inside"><a href="#" class="menu_link menu_link-inside">Cuidado Personal</a></li>
-                    <li class="menu_inside"><a href="#" class="menu_link menu_link-inside">Higiene Bucal</a></li>
-                    <li class="menu_inside"><a href="#" class="menu_link menu_link-inside">Ofertas</a></li>
+                    <li class="menu_inside"><a href="/productos/CuidadPersonal" class="menu_link menu_link-inside">Cuidado Personal</a></li>
+                    {{!-- <li class="menu_inside"><a href="/productos/HigieneBucal" class="menu_link menu_link-inside">Higiene Bucal</a></li> --}}
+                    <li class="menu_inside"><a href="/productos/o/oferta" class="menu_link menu_link-inside">Ofertas</a></li>
                   </ul>
                 </li>
                 <!-- <li><a href="#">Ofertas</a></li> -->
                 <li class="menu-item"><a href="/nosotros" class="menu_link">Nosotros</a></li>
                 <li class="menu-item"><a href="/contacto" class="menu_link">Contacto</a></li>
-                <li class="menu-item"><a href="#" class="menu_link">Carrito</a></li>
+                {{#if user}}
+                <li class="menu-item"><a href="/mi-carrito" class="menu_link">Carrito</a></li>
+                {{else}}
+                <li class="menu-item" id="carroref"><a href="#" class="menu_link">Carrito</a></li>
+                  <script>
+                    const refcarro = document.getElementById('carroref')
+                    refcarro.addEventListener('click', () => {
+                      Swal.fire({
+                      title: 'Estimado, cliente',
+                      text: 'No puedes realizar una compra sin haber iniciado sesion',
+                      icon: 'info',
+                      confirmButtonText: 'Ok'
+                    })
+                    })
+                  </script>
+                {{/if}}
               </ul>
             </nav>
           </div>

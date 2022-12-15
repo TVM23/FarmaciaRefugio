@@ -37,20 +37,15 @@ h1, h2, h3{
 
 .contenedor
 {
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
-    display: flex;
-}
-
-.laterali
-{
-    width: 15%;
-    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .laterald
 {
-    width: 85%;
+    width: 100%;
     margin: 1rem;
 }
 
@@ -70,7 +65,7 @@ h1, h2, h3{
 .imagen
 {
     width: 100%;
-    height: 70%;
+    height: 75%;
     border: solid 1px lightgray;
     display: flex;
     align-items: center;
@@ -96,6 +91,13 @@ h1, h2, h3{
     font-weight: bold;
     font-size: 19px;
     margin-bottom: 1rem;
+}
+
+.preciod
+{
+    color: #B8B8B8;
+    font-size: 13px;
+    text-decoration: line-through;
 }
 
 .boton
@@ -144,18 +146,6 @@ h1, h2, h3{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-}
-
-.laterali
-{
-    width: 35%;
-    margin: 1rem;
-}
-
-.laterald
-{
-    width: 65%;
-    margin: 1rem;
 }
 
 .contenedor-producto

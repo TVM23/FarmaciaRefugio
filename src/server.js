@@ -12,6 +12,7 @@ import indexRoutes from './routes/index.routes.js';
 import usuarioRoutes from './routes/usuario.routes.js';
 import categoriaRoutes from './routes/categoriaRoutes.js';
 import productoRoutes from './routes/productoRoutes.js';
+import contactoRoutes from './routes/contactoRoutes.js';
 import morgan from 'morgan';
 import methodOverride from 'method-override';
 import flash from 'connect-flash';
@@ -65,6 +66,8 @@ app.use(indexRoutes);
 app.use(usuarioRoutes);
 app.use(productoRoutes);
 app.use(categoriaRoutes);
+app.use(contactoRoutes);
+
 
 //Flles estaticos
 app.use(express.static(path.join(__dirname, 'public')));

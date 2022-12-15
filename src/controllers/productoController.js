@@ -21,6 +21,21 @@ productoController.obtenerProducto = async (req, res)=>
     res.render('producto', { producto });
 }
 
+productoController.search = async (req, res, next) => 
+{
+    const productosf =  await Producto.find({categoria: new RegExp(req.params.query, 'i')}).lean(); 
+   //res.json(productos);
+    res.render('productos', {productosf});
+
+}
+
+productoController.ofertas = async (req, res, next) => 
+{
+    const productosO =  await Producto.find({oferta: new RegExp(req.params.query, 'i')}).lean(); 
+   //res.json(productos);
+    res.render('productosof', {productosO});
+}
+
 export default productoController;
 
 
